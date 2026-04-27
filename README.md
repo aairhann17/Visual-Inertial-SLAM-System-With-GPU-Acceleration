@@ -37,7 +37,7 @@ ctest --test-dir build -C Debug --output-on-failure
 ## Architecture Diagram (High-Level Overview)
 
                          ┌────────────────────────────────────────┐
-                         │              Input Streams              │
+                         │              Input Streams             │
                          │────────────────────────────────────────│
                          │   • Camera Frames (Left/Right)         │
                          │   • IMU Data (Accel + Gyro)            │
@@ -59,65 +59,65 @@ ctest --test-dir build -C Debug --output-on-failure
     ┌──────────────────────────────────────────────────────────────────────────────┐
     │                               IMU PRE-INTEGRATION                            │
     │──────────────────────────────────────────────────────────────────────────────│
-    │  • Bias Correction                                                            │
-    │  • Noise Propagation                                                          │
-    │  • Pre-integrated Delta Pose (ΔR, Δv, Δp)                                     │
-    │  • Jacobians + Covariance                                                     │
+    │  • Bias Correction                                                           │
+    │  • Noise Propagation                                                         │
+    │  • Pre-integrated Delta Pose (ΔR, Δv, Δp)                                    │
+    │  • Jacobians + Covariance                                                    │
     └──────────────────────────────────────────────────────────────────────────────┘
                                              │
                                              ▼
     ┌──────────────────────────────────────────────────────────────────────────────┐
-    │                               INITIAL ESTIMATION                              │
+    │                               INITIAL ESTIMATION                             │
     │──────────────────────────────────────────────────────────────────────────────│
-    │  • Triangulation (3D Landmarks)                                               │
-    │  • PnP Pose Estimation                                                        │
-    │  • Visual + Inertial Fusion                                                   │
+    │  • Triangulation (3D Landmarks)                                              │
+    │  • PnP Pose Estimation                                                       │
+    │  • Visual + Inertial Fusion                                                  │
     └──────────────────────────────────────────────────────────────────────────────┘
                                              │
                                              ▼
     ┌──────────────────────────────────────────────────────────────────────────────┐
-    │                                BACKEND (OPTIMIZER)                            │
+    │                                BACKEND (OPTIMIZER)                           │
     │──────────────────────────────────────────────────────────────────────────────│
-    │  • Nonlinear Optimization (Gauss-Newton / LM)                                 │
-    │  • Bundle Adjustment (Local / Global)                                         │
-    │  • Sliding Window Optimization                                                 │
-    │  • Marginalization of Old Keyframes                                           │
+    │  • Nonlinear Optimization (Gauss-Newton / LM)                                │
+    │  • Bundle Adjustment (Local / Global)                                        │
+    │  • Sliding Window Optimization                                               │
+    │  • Marginalization of Old Keyframes                                          │
     └──────────────────────────────────────────────────────────────────────────────┘
                                              │
                                              ▼
     ┌──────────────────────────────────────────────────────────────────────────────┐
-    │                                LOOP CLOSURE                                   │
+    │                                LOOP CLOSURE                                  │
     │──────────────────────────────────────────────────────────────────────────────│
-    │  • Bag-of-Words (DBoW2)                                                       │
-    │  • Loop Candidate Detection                                                   │
-    │  • Pose Graph Optimization                                                    │
-    │  • Global Trajectory Correction                                               │
+    │  • Bag-of-Words (DBoW2)                                                      │
+    │  • Loop Candidate Detection                                                  │
+    │  • Pose Graph Optimization                                                   │
+    │  • Global Trajectory Correction                                              │
     └──────────────────────────────────────────────────────────────────────────────┘
                                              │
                                              ▼
     ┌──────────────────────────────────────────────────────────────────────────────┐
-    │                                 MAPPING                                       │
+    │                                 MAPPING                                      │
     │──────────────────────────────────────────────────────────────────────────────│
-    │  • 3D Landmark Management                                                     │
-    │  • Keyframe Graph                                                             │
-    │  • Map Pruning                                                                │
+    │  • 3D Landmark Management                                                    │
+    │  • Keyframe Graph                                                            │
+    │  • Map Pruning                                                               │
     └──────────────────────────────────────────────────────────────────────────────┘
                                              │
                                              ▼
     ┌──────────────────────────────────────────────────────────────────────────────┐
-    │                             GPU ACCELERATION (CUDA)                           │
+    │                             GPU ACCELERATION (CUDA)                          │
     │──────────────────────────────────────────────────────────────────────────────│
-    │  • Parallel Feature Extraction                                                 │
-    │  • GPU Optical Flow                                                            │
-    │  • Descriptor Computation                                                      │
+    │  • Parallel Feature Extraction                                               │
+    │  • GPU Optical Flow                                                          │
+    │  • Descriptor Computation                                                    │
     └──────────────────────────────────────────────────────────────────────────────┘
                                              │
                                              ▼
     ┌──────────────────────────────────────────────────────────────────────────────┐
-    │                           VISUALIZATION & EVALUATION                          │
+    │                           VISUALIZATION & EVALUATION                         │
     │──────────────────────────────────────────────────────────────────────────────│
-    │  • Real-Time 3D Viewer (Pangolin)                                             │
-    │  • Trajectory Plots (ATE/RPE)                                                 │
-    │  • Map Rendering                                                               │
+    │  • Real-Time 3D Viewer (Pangolin)                                            │
+    │  • Trajectory Plots (ATE/RPE)                                                │
+    │  • Map Rendering                                                             │
     └──────────────────────────────────────────────────────────────────────────────┘
 
