@@ -1,0 +1,7 @@
+test_imu 0 0
+test_triangulation 0 0
+test_optimizer 0 0
+---
+test_imu
+test_triangulation
+test_optimizer

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\aaraa\Visual-Inertial-SLAM-System-With-GPU-Acceleration\tests\test_triangulation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\aaraa\Visual-Inertial-SLAM-System-With-GPU-Acceleration\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A65373FE-9FE0-3425-9CA2-3E3DCF93BC2D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
