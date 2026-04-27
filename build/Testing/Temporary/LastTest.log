@@ -1,51 +1,48 @@
-Start testing: Apr 27 16:21 Eastern Summer Time
+Start testing: Apr 27 16:22 Eastern Summer Time
 ----------------------------------------------------------
-Test not available without configuration.  (Missing "-C <config>"?)
 1/3 Testing: test_imu
 1/3 Test: test_imu
-Command: "NOT_AVAILABLE"
+Command: "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build/Debug/test_imu.exe"
 Directory: C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build
-"test_imu" start time: 
+"test_imu" start time: Apr 27 16:22 Eastern Summer Time
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.00 sec
+Test time =   0.76 sec
 ----------------------------------------------------------
 Test Passed.
-"test_imu" end time: Apr 27 16:21 Eastern Summer Time
+"test_imu" end time: Apr 27 16:22 Eastern Summer Time
 "test_imu" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-Test not available without configuration.  (Missing "-C <config>"?)
 2/3 Testing: test_triangulation
 2/3 Test: test_triangulation
-Command: "NOT_AVAILABLE"
+Command: "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build/Debug/test_triangulation.exe"
 Directory: C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build
-"test_triangulation" start time: 
+"test_triangulation" start time: Apr 27 16:22 Eastern Summer Time
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.00 sec
+Test time =   0.59 sec
 ----------------------------------------------------------
 Test Passed.
-"test_triangulation" end time: Apr 27 16:21 Eastern Summer Time
+"test_triangulation" end time: Apr 27 16:22 Eastern Summer Time
 "test_triangulation" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-Test not available without configuration.  (Missing "-C <config>"?)
 3/3 Testing: test_optimizer
 3/3 Test: test_optimizer
-Command: "NOT_AVAILABLE"
+Command: "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build/Debug/test_optimizer.exe"
 Directory: C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build
-"test_optimizer" start time: 
+"test_optimizer" start time: Apr 27 16:22 Eastern Summer Time
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.00 sec
+Test time =   0.62 sec
 ----------------------------------------------------------
 Test Passed.
-"test_optimizer" end time: Apr 27 16:21 Eastern Summer Time
+"test_optimizer" end time: Apr 27 16:22 Eastern Summer Time
 "test_optimizer" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Apr 27 16:21 Eastern Summer Time
+End testing: Apr 27 16:22 Eastern Summer Time
