@@ -173,19 +173,9 @@ Run:
 After a run, evaluate Absolute Trajectory Error (ATE) and Relative Pose Error (RPE):
 
 ```bash
-python scripts/evaluate_ate_rpe.py --estimated output/trajectory.txt \
-                                   --groundtruth datasets/euroc/MH_01_easy/mav0/state_groundtruth_estimate0/data.csv
-python scripts/plot_trajectory.py  --input output/trajectory.txt
+ctest --test-dir build -C Debug --output-on-failure
 ```
 
----
+## CUDA Note
 
-## 6. Future Work
-
-- [ ] Full CUDA Lucas-Kanade optical flow kernel
-- [ ] Dense depth estimation using stereo SGM on GPU
-- [ ] Loop closure detection with DBoW vocabulary trees
-- [ ] Marginalization factor for sliding-window VIO
-- [ ] ROS 2 wrapper for real-time sensor input
-- [ ] Online calibration of IMU-camera extrinsics
-- [ ] Pangolin real-time trajectory and map visualization
+`VISLAM_ENABLE_CUDA` is enabled by default. If no CUDA compiler is found, CMake skips `gpu/` targets automatically.
