@@ -1,17 +1,17 @@
-Start testing: Apr 27 16:22 Eastern Summer Time
+Start testing: Jul 13 16:29 Eastern Summer Time
 ----------------------------------------------------------
 1/3 Testing: test_imu
 1/3 Test: test_imu
 Command: "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build/Debug/test_imu.exe"
 Directory: C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build
-"test_imu" start time: Apr 27 16:22 Eastern Summer Time
+"test_imu" start time: Jul 13 16:29 Eastern Summer Time
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.76 sec
+Test time =   0.47 sec
 ----------------------------------------------------------
 Test Passed.
-"test_imu" end time: Apr 27 16:22 Eastern Summer Time
+"test_imu" end time: Jul 13 16:29 Eastern Summer Time
 "test_imu" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -19,14 +19,14 @@ Test Passed.
 2/3 Test: test_triangulation
 Command: "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build/Debug/test_triangulation.exe"
 Directory: C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build
-"test_triangulation" start time: Apr 27 16:22 Eastern Summer Time
+"test_triangulation" start time: Jul 13 16:29 Eastern Summer Time
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.59 sec
+Test time =   0.41 sec
 ----------------------------------------------------------
 Test Passed.
-"test_triangulation" end time: Apr 27 16:22 Eastern Summer Time
+"test_triangulation" end time: Jul 13 16:29 Eastern Summer Time
 "test_triangulation" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -34,15 +34,15 @@ Test Passed.
 3/3 Test: test_optimizer
 Command: "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build/Debug/test_optimizer.exe"
 Directory: C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build
-"test_optimizer" start time: Apr 27 16:22 Eastern Summer Time
+"test_optimizer" start time: Jul 13 16:29 Eastern Summer Time
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.62 sec
+Test time =   0.52 sec
 ----------------------------------------------------------
 Test Passed.
-"test_optimizer" end time: Apr 27 16:22 Eastern Summer Time
+"test_optimizer" end time: Jul 13 16:29 Eastern Summer Time
 "test_optimizer" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Apr 27 16:22 Eastern Summer Time
+End testing: Jul 13 16:29 Eastern Summer Time

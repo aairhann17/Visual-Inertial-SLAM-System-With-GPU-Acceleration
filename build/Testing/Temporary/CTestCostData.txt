@@ -1,4 +1,4 @@
-test_imu 1 0.761291
-test_triangulation 1 0.59301
-test_optimizer 1 0.623599
+test_imu 2 0.234608
+test_triangulation 2 0.204786
+test_optimizer 2 0.258955
 ---
