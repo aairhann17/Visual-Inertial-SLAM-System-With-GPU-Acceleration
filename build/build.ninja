@@ -53,7 +53,7 @@ build CMakeFiles/vislam_core.dir/src/frontend/feature_detector.cpp.obj: CXX_COMP
   CONFIG = Debug
   DEP_FILE = CMakeFiles\vislam_core.dir\src\frontend\feature_detector.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
-  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include
+  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\vislam_core.dir
   OBJECT_FILE_DIR = CMakeFiles\vislam_core.dir\src\frontend
   TARGET_COMPILE_PDB = CMakeFiles\vislam_core.dir\vislam_core.pdb
@@ -64,7 +64,7 @@ build CMakeFiles/vislam_core.dir/src/frontend/feature_tracker.cpp.obj: CXX_COMPI
   CONFIG = Debug
   DEP_FILE = CMakeFiles\vislam_core.dir\src\frontend\feature_tracker.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
-  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include
+  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\vislam_core.dir
   OBJECT_FILE_DIR = CMakeFiles\vislam_core.dir\src\frontend
   TARGET_COMPILE_PDB = CMakeFiles\vislam_core.dir\vislam_core.pdb
@@ -75,7 +75,7 @@ build CMakeFiles/vislam_core.dir/src/frontend/imu_preintegration.cpp.obj: CXX_CO
   CONFIG = Debug
   DEP_FILE = CMakeFiles\vislam_core.dir\src\frontend\imu_preintegration.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
-  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include
+  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\vislam_core.dir
   OBJECT_FILE_DIR = CMakeFiles\vislam_core.dir\src\frontend
   TARGET_COMPILE_PDB = CMakeFiles\vislam_core.dir\vislam_core.pdb
@@ -86,7 +86,7 @@ build CMakeFiles/vislam_core.dir/src/backend/optimizer.cpp.obj: CXX_COMPILER__vi
   CONFIG = Debug
   DEP_FILE = CMakeFiles\vislam_core.dir\src\backend\optimizer.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
-  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include
+  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\vislam_core.dir
   OBJECT_FILE_DIR = CMakeFiles\vislam_core.dir\src\backend
   TARGET_COMPILE_PDB = CMakeFiles\vislam_core.dir\vislam_core.pdb
@@ -97,7 +97,7 @@ build CMakeFiles/vislam_core.dir/src/backend/bundle_adjustment.cpp.obj: CXX_COMP
   CONFIG = Debug
   DEP_FILE = CMakeFiles\vislam_core.dir\src\backend\bundle_adjustment.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
-  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include
+  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\vislam_core.dir
   OBJECT_FILE_DIR = CMakeFiles\vislam_core.dir\src\backend
   TARGET_COMPILE_PDB = CMakeFiles\vislam_core.dir\vislam_core.pdb
@@ -108,7 +108,7 @@ build CMakeFiles/vislam_core.dir/src/backend/pose_graph.cpp.obj: CXX_COMPILER__v
   CONFIG = Debug
   DEP_FILE = CMakeFiles\vislam_core.dir\src\backend\pose_graph.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
-  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include
+  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\vislam_core.dir
   OBJECT_FILE_DIR = CMakeFiles\vislam_core.dir\src\backend
   TARGET_COMPILE_PDB = CMakeFiles\vislam_core.dir\vislam_core.pdb
@@ -119,7 +119,7 @@ build CMakeFiles/vislam_core.dir/src/mapping/triangulation.cpp.obj: CXX_COMPILER
   CONFIG = Debug
   DEP_FILE = CMakeFiles\vislam_core.dir\src\mapping\triangulation.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
-  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include
+  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\vislam_core.dir
   OBJECT_FILE_DIR = CMakeFiles\vislam_core.dir\src\mapping
   TARGET_COMPILE_PDB = CMakeFiles\vislam_core.dir\vislam_core.pdb
@@ -130,7 +130,7 @@ build CMakeFiles/vislam_core.dir/src/mapping/keyframe.cpp.obj: CXX_COMPILER__vis
   CONFIG = Debug
   DEP_FILE = CMakeFiles\vislam_core.dir\src\mapping\keyframe.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
-  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include
+  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\vislam_core.dir
   OBJECT_FILE_DIR = CMakeFiles\vislam_core.dir\src\mapping
   TARGET_COMPILE_PDB = CMakeFiles\vislam_core.dir\vislam_core.pdb
@@ -141,7 +141,7 @@ build CMakeFiles/vislam_core.dir/src/mapping/map.cpp.obj: CXX_COMPILER__vislam_c
   CONFIG = Debug
   DEP_FILE = CMakeFiles\vislam_core.dir\src\mapping\map.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
-  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include
+  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\vislam_core.dir
   OBJECT_FILE_DIR = CMakeFiles\vislam_core.dir\src\mapping
   TARGET_COMPILE_PDB = CMakeFiles\vislam_core.dir\vislam_core.pdb
@@ -152,7 +152,7 @@ build CMakeFiles/vislam_core.dir/src/utils/dataset_loader.cpp.obj: CXX_COMPILER_
   CONFIG = Debug
   DEP_FILE = CMakeFiles\vislam_core.dir\src\utils\dataset_loader.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
-  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include
+  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\vislam_core.dir
   OBJECT_FILE_DIR = CMakeFiles\vislam_core.dir\src\utils
   TARGET_COMPILE_PDB = CMakeFiles\vislam_core.dir\vislam_core.pdb
@@ -179,48 +179,6 @@ build vislam_core.lib: CXX_STATIC_LIBRARY_LINKER__vislam_core_Debug CMakeFiles/v
   TARGET_SUPPORT_DIR = CMakeFiles\vislam_core.dir
 
 # =============================================================================
-# Object build statements for EXECUTABLE target vislam_app
-
-
-#############################################
-# Order-only phony target for vislam_app
-
-build cmake_object_order_depends_target_vislam_app: phony || cmake_object_order_depends_target_vislam_core
-
-build CMakeFiles/vislam_app.dir/src/main.cpp.obj: CXX_COMPILER__vislam_app_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/main.cpp || cmake_object_order_depends_target_vislam_app
-  CONFIG = Debug
-  DEP_FILE = CMakeFiles\vislam_app.dir\src\main.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
-  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include
-  OBJECT_DIR = CMakeFiles\vislam_app.dir
-  OBJECT_FILE_DIR = CMakeFiles\vislam_app.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\vislam_app.dir\
-  TARGET_PDB = vislam_app.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\vislam_app.dir
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target vislam_app
-
-
-#############################################
-# Link the executable vislam_app.exe
-
-build vislam_app.exe: CXX_EXECUTABLE_LINKER__vislam_app_Debug CMakeFiles/vislam_app.dir/src/main.cpp.obj | vislam_core.lib || vislam_core.lib
-  CONFIG = Debug
-  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
-  LINK_FLAGS = -Xlinker /subsystem:console -fuse-ld=lld-link
-  LINK_LIBRARIES = vislam_core.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
-  OBJECT_DIR = CMakeFiles\vislam_app.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\vislam_app.dir\
-  TARGET_FILE = vislam_app.exe
-  TARGET_IMPLIB = vislam_app.lib
-  TARGET_PDB = vislam_app.pdb
-  TARGET_SUPPORT_DIR = CMakeFiles\vislam_app.dir
-
-# =============================================================================
 # Object build statements for EXECUTABLE target test_imu
 
 
@@ -233,7 +191,7 @@ build CMakeFiles/test_imu.dir/tests/test_imu.cpp.obj: CXX_COMPILER__test_imu_uns
   CONFIG = Debug
   DEP_FILE = CMakeFiles\test_imu.dir\tests\test_imu.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
-  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include
+  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\test_imu.dir
   OBJECT_FILE_DIR = CMakeFiles\test_imu.dir\tests
   TARGET_COMPILE_PDB = CMakeFiles\test_imu.dir\
@@ -248,11 +206,11 @@ build CMakeFiles/test_imu.dir/tests/test_imu.cpp.obj: CXX_COMPILER__test_imu_uns
 #############################################
 # Link the executable test_imu.exe
 
-build test_imu.exe: CXX_EXECUTABLE_LINKER__test_imu_Debug CMakeFiles/test_imu.dir/tests/test_imu.cpp.obj | vislam_core.lib || vislam_core.lib
+build test_imu.exe: CXX_EXECUTABLE_LINKER__test_imu_Debug CMakeFiles/test_imu.dir/tests/test_imu.cpp.obj | vislam_core.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib || vislam_core.lib
   CONFIG = Debug
   FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
   LINK_FLAGS = -Xlinker /subsystem:console -fuse-ld=lld-link
-  LINK_LIBRARIES = vislam_core.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
+  LINK_LIBRARIES = vislam_core.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
   OBJECT_DIR = CMakeFiles\test_imu.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -275,7 +233,7 @@ build CMakeFiles/test_triangulation.dir/tests/test_triangulation.cpp.obj: CXX_CO
   CONFIG = Debug
   DEP_FILE = CMakeFiles\test_triangulation.dir\tests\test_triangulation.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
-  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include
+  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\test_triangulation.dir
   OBJECT_FILE_DIR = CMakeFiles\test_triangulation.dir\tests
   TARGET_COMPILE_PDB = CMakeFiles\test_triangulation.dir\
@@ -290,11 +248,11 @@ build CMakeFiles/test_triangulation.dir/tests/test_triangulation.cpp.obj: CXX_CO
 #############################################
 # Link the executable test_triangulation.exe
 
-build test_triangulation.exe: CXX_EXECUTABLE_LINKER__test_triangulation_Debug CMakeFiles/test_triangulation.dir/tests/test_triangulation.cpp.obj | vislam_core.lib || vislam_core.lib
+build test_triangulation.exe: CXX_EXECUTABLE_LINKER__test_triangulation_Debug CMakeFiles/test_triangulation.dir/tests/test_triangulation.cpp.obj | vislam_core.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib || vislam_core.lib
   CONFIG = Debug
   FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
   LINK_FLAGS = -Xlinker /subsystem:console -fuse-ld=lld-link
-  LINK_LIBRARIES = vislam_core.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
+  LINK_LIBRARIES = vislam_core.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
   OBJECT_DIR = CMakeFiles\test_triangulation.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -317,7 +275,7 @@ build CMakeFiles/test_optimizer.dir/tests/test_optimizer.cpp.obj: CXX_COMPILER__
   CONFIG = Debug
   DEP_FILE = CMakeFiles\test_optimizer.dir\tests\test_optimizer.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
-  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include
+  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\test_optimizer.dir
   OBJECT_FILE_DIR = CMakeFiles\test_optimizer.dir\tests
   TARGET_COMPILE_PDB = CMakeFiles\test_optimizer.dir\
@@ -332,11 +290,11 @@ build CMakeFiles/test_optimizer.dir/tests/test_optimizer.cpp.obj: CXX_COMPILER__
 #############################################
 # Link the executable test_optimizer.exe
 
-build test_optimizer.exe: CXX_EXECUTABLE_LINKER__test_optimizer_Debug CMakeFiles/test_optimizer.dir/tests/test_optimizer.cpp.obj | vislam_core.lib || vislam_core.lib
+build test_optimizer.exe: CXX_EXECUTABLE_LINKER__test_optimizer_Debug CMakeFiles/test_optimizer.dir/tests/test_optimizer.cpp.obj | vislam_core.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib || vislam_core.lib
   CONFIG = Debug
   FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
   LINK_FLAGS = -Xlinker /subsystem:console -fuse-ld=lld-link
-  LINK_LIBRARIES = vislam_core.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
+  LINK_LIBRARIES = vislam_core.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
   OBJECT_DIR = CMakeFiles\test_optimizer.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -391,8 +349,6 @@ build test_optimizer: phony test_optimizer.exe
 
 build test_triangulation: phony test_triangulation.exe
 
-build vislam_app: phony vislam_app.exe
-
 build vislam_core: phony vislam_core.lib
 
 # =============================================================================
@@ -403,7 +359,7 @@ build vislam_core: phony vislam_core.lib
 #############################################
 # Folder: C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build
 
-build all: phony vislam_core.lib vislam_app.exe test_imu.exe test_triangulation.exe test_optimizer.exe
+build all: phony vislam_core.lib test_imu.exe test_triangulation.exe test_optimizer.exe
 
 # =============================================================================
 # Built-in targets
@@ -412,14 +368,14 @@ build all: phony vislam_core.lib vislam_app.exe test_imu.exe test_triangulation.
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build/cmake_install.cmake C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build/CTestTestfile.cmake: RERUN_CMAKE | C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CheckLanguage.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Compiler/Clang-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Compiler/Clang.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Linker/LLD-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Linker/LLD.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Linker/MSVC.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/Linker/Windows-LLD-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/Linker/Windows-LLD.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/Linker/Windows-MSVC.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/Windows-Clang-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/Windows-Clang.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/WindowsPaths.cmake C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/CMakeLists.txt CMakeCache.txt CMakeFiles/4.2.3/CMakeCXXCompiler.cmake CMakeFiles/4.2.3/CMakeRCCompiler.cmake CMakeFiles/4.2.3/CMakeSystem.cmake
+build build.ninja C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build/cmake_install.cmake C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build/CTestTestfile.cmake: RERUN_CMAKE | C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CheckCXXSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CheckIncludeFileCXX.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CheckLanguage.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CheckLibraryExists.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Compiler/Clang-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Compiler/Clang.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/FindPackageMessage.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/FindTIFF.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/FindThreads.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Linker/LLD-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Linker/LLD.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Linker/MSVC.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/Linker/Windows-LLD-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/Linker/Windows-LLD.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/Linker/Windows-MSVC.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/Windows-Clang-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/Windows-Clang.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/SelectLibraryConfigurations.cmake C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/CMakeLists.txt C$:/vcpkg/installed/x64-windows/share/absl/abslConfig.cmake C$:/vcpkg/installed/x64-windows/share/absl/abslConfigVersion.cmake C$:/vcpkg/installed/x64-windows/share/absl/abslTargets-debug.cmake C$:/vcpkg/installed/x64-windows/share/absl/abslTargets-release.cmake C$:/vcpkg/installed/x64-windows/share/absl/abslTargets.cmake C$:/vcpkg/installed/x64-windows/share/flatbuffers/BuildFlatBuffers.cmake C$:/vcpkg/installed/x64-windows/share/flatbuffers/FlatBuffersTargets-debug.cmake C$:/vcpkg/installed/x64-windows/share/flatbuffers/FlatBuffersTargets-release.cmake C$:/vcpkg/installed/x64-windows/share/flatbuffers/FlatBuffersTargets.cmake C$:/vcpkg/installed/x64-windows/share/flatbuffers/FlatcTargets-release.cmake C$:/vcpkg/installed/x64-windows/share/flatbuffers/FlatcTargets.cmake C$:/vcpkg/installed/x64-windows/share/flatbuffers/flatbuffers-config-version.cmake C$:/vcpkg/installed/x64-windows/share/flatbuffers/flatbuffers-config.cmake C$:/vcpkg/installed/x64-windows/share/opencv4/OpenCVConfig-version.cmake C$:/vcpkg/installed/x64-windows/share/opencv4/OpenCVConfig.cmake C$:/vcpkg/installed/x64-windows/share/opencv4/OpenCVModules-debug.cmake C$:/vcpkg/installed/x64-windows/share/opencv4/OpenCVModules-release.cmake C$:/vcpkg/installed/x64-windows/share/opencv4/OpenCVModules.cmake C$:/vcpkg/installed/x64-windows/share/protobuf/protobuf-config-version.cmake C$:/vcpkg/installed/x64-windows/share/protobuf/protobuf-config.cmake C$:/vcpkg/installed/x64-windows/share/protobuf/protobuf-generate.cmake C$:/vcpkg/installed/x64-windows/share/protobuf/protobuf-module.cmake C$:/vcpkg/installed/x64-windows/share/protobuf/protobuf-options.cmake C$:/vcpkg/installed/x64-windows/share/protobuf/protobuf-targets-debug.cmake C$:/vcpkg/installed/x64-windows/share/protobuf/protobuf-targets-release.cmake C$:/vcpkg/installed/x64-windows/share/protobuf/protobuf-targets.cmake C$:/vcpkg/installed/x64-windows/share/quirc/quirc-config-debug.cmake C$:/vcpkg/installed/x64-windows/share/quirc/quirc-config-release.cmake C$:/vcpkg/installed/x64-windows/share/quirc/quirc-config.cmake C$:/vcpkg/installed/x64-windows/share/utf8_range/utf8_range-config.cmake C$:/vcpkg/installed/x64-windows/share/utf8_range/utf8_range-targets-debug.cmake C$:/vcpkg/installed/x64-windows/share/utf8_range/utf8_range-targets-release.cmake C$:/vcpkg/installed/x64-windows/share/utf8_range/utf8_range-targets.cmake CMakeCache.txt CMakeFiles/4.2.3/CMakeCXXCompiler.cmake CMakeFiles/4.2.3/CMakeRCCompiler.cmake CMakeFiles/4.2.3/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CheckLanguage.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Compiler/Clang-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Compiler/Clang.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Linker/LLD-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Linker/LLD.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Linker/MSVC.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/Linker/Windows-LLD-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/Linker/Windows-LLD.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/Linker/Windows-MSVC.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/Windows-Clang-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/Windows-Clang.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/WindowsPaths.cmake C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/CMakeLists.txt CMakeCache.txt CMakeFiles/4.2.3/CMakeCXXCompiler.cmake CMakeFiles/4.2.3/CMakeRCCompiler.cmake CMakeFiles/4.2.3/CMakeSystem.cmake: phony
+build C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CheckCXXSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CheckIncludeFileCXX.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CheckLanguage.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/CheckLibraryExists.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Compiler/Clang-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Compiler/Clang.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/FindPackageMessage.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/FindTIFF.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/FindThreads.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Linker/LLD-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Linker/LLD.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Linker/MSVC.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/Linker/Windows-LLD-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/Linker/Windows-LLD.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/Linker/Windows-MSVC.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/Windows-Clang-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/Windows-Clang.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/CMake/share/cmake-4.2/Modules/SelectLibraryConfigurations.cmake C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/CMakeLists.txt C$:/vcpkg/installed/x64-windows/share/absl/abslConfig.cmake C$:/vcpkg/installed/x64-windows/share/absl/abslConfigVersion.cmake C$:/vcpkg/installed/x64-windows/share/absl/abslTargets-debug.cmake C$:/vcpkg/installed/x64-windows/share/absl/abslTargets-release.cmake C$:/vcpkg/installed/x64-windows/share/absl/abslTargets.cmake C$:/vcpkg/installed/x64-windows/share/flatbuffers/BuildFlatBuffers.cmake C$:/vcpkg/installed/x64-windows/share/flatbuffers/FlatBuffersTargets-debug.cmake C$:/vcpkg/installed/x64-windows/share/flatbuffers/FlatBuffersTargets-release.cmake C$:/vcpkg/installed/x64-windows/share/flatbuffers/FlatBuffersTargets.cmake C$:/vcpkg/installed/x64-windows/share/flatbuffers/FlatcTargets-release.cmake C$:/vcpkg/installed/x64-windows/share/flatbuffers/FlatcTargets.cmake C$:/vcpkg/installed/x64-windows/share/flatbuffers/flatbuffers-config-version.cmake C$:/vcpkg/installed/x64-windows/share/flatbuffers/flatbuffers-config.cmake C$:/vcpkg/installed/x64-windows/share/opencv4/OpenCVConfig-version.cmake C$:/vcpkg/installed/x64-windows/share/opencv4/OpenCVConfig.cmake C$:/vcpkg/installed/x64-windows/share/opencv4/OpenCVModules-debug.cmake C$:/vcpkg/installed/x64-windows/share/opencv4/OpenCVModules-release.cmake C$:/vcpkg/installed/x64-windows/share/opencv4/OpenCVModules.cmake C$:/vcpkg/installed/x64-windows/share/protobuf/protobuf-config-version.cmake C$:/vcpkg/installed/x64-windows/share/protobuf/protobuf-config.cmake C$:/vcpkg/installed/x64-windows/share/protobuf/protobuf-generate.cmake C$:/vcpkg/installed/x64-windows/share/protobuf/protobuf-module.cmake C$:/vcpkg/installed/x64-windows/share/protobuf/protobuf-options.cmake C$:/vcpkg/installed/x64-windows/share/protobuf/protobuf-targets-debug.cmake C$:/vcpkg/installed/x64-windows/share/protobuf/protobuf-targets-release.cmake C$:/vcpkg/installed/x64-windows/share/protobuf/protobuf-targets.cmake C$:/vcpkg/installed/x64-windows/share/quirc/quirc-config-debug.cmake C$:/vcpkg/installed/x64-windows/share/quirc/quirc-config-release.cmake C$:/vcpkg/installed/x64-windows/share/quirc/quirc-config.cmake C$:/vcpkg/installed/x64-windows/share/utf8_range/utf8_range-config.cmake C$:/vcpkg/installed/x64-windows/share/utf8_range/utf8_range-targets-debug.cmake C$:/vcpkg/installed/x64-windows/share/utf8_range/utf8_range-targets-release.cmake C$:/vcpkg/installed/x64-windows/share/utf8_range/utf8_range-targets.cmake CMakeCache.txt CMakeFiles/4.2.3/CMakeCXXCompiler.cmake CMakeFiles/4.2.3/CMakeRCCompiler.cmake CMakeFiles/4.2.3/CMakeSystem.cmake: phony
 
 
 #############################################

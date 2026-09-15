@@ -6,7 +6,15 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-find_package(OpenCV REQUIRED core imgproc video highgui)
+if(NOT DEFINED OpenCV_DIR)
+    if(DEFINED ENV{VCPKG_INSTALLED_DIR})
+        set(OpenCV_DIR "$ENV{VCPKG_INSTALLED_DIR}/x64-windows/share/opencv4")
+    elseif(EXISTS "C:/vcpkg/installed/x64-windows/share/opencv4/OpenCVConfig.cmake")
+        set(OpenCV_DIR "C:/vcpkg/installed/x64-windows/share/opencv4")
+    endif()
+endif()
+
+find_package(OpenCV REQUIRED CONFIG COMPONENTS core imgproc imgcodecs videoio highgui)
 
 option(VISLAM_BUILD_TESTS "Build unit-style test executables" ON)
 option(VISLAM_ENABLE_CUDA "Build optional CUDA acceleration library" ON)
