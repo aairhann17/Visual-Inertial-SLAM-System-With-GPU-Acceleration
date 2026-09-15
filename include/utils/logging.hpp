@@ -32,9 +32,16 @@ inline void Log(const LogLevel level, const std::string& message) {
 	static std::mutex log_mutex;
 	const auto now = std::chrono::system_clock::now();
 	const auto now_time_t = std::chrono::system_clock::to_time_t(now);
+	std::tm tm_value {};
+
+#if defined(_WIN32)
+	localtime_s(&tm_value, &now_time_t);
+#else
+	localtime_r(&now_time_t, &tm_value);
+#endif
 
 	std::ostringstream ss;
-	ss << std::put_time(std::localtime(&now_time_t), "%Y-%m-%d %H:%M:%S");
+	ss << std::put_time(&tm_value, "%Y-%m-%d %H:%M:%S");
 
 	std::lock_guard<std::mutex> lock(log_mutex);
 	std::cout << "[" << ss.str() << "]"

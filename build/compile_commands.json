@@ -1,0 +1,86 @@
+[
+{
+  "directory": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build",
+  "command": "C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang.exe -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\vislam_core.dir\\src\\frontend\\feature_detector.cpp.obj -c C:\\Users\\aaraa\\Visual-Inertial-SLAM-System-With-GPU-Acceleration\\src\\frontend\\feature_detector.cpp",
+  "file": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/frontend/feature_detector.cpp",
+  "output": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build/CMakeFiles/vislam_core.dir/src/frontend/feature_detector.cpp.obj"
+},
+{
+  "directory": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build",
+  "command": "C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang.exe -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\vislam_core.dir\\src\\frontend\\feature_tracker.cpp.obj -c C:\\Users\\aaraa\\Visual-Inertial-SLAM-System-With-GPU-Acceleration\\src\\frontend\\feature_tracker.cpp",
+  "file": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/frontend/feature_tracker.cpp",
+  "output": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build/CMakeFiles/vislam_core.dir/src/frontend/feature_tracker.cpp.obj"
+},
+{
+  "directory": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build",
+  "command": "C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang.exe -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\vislam_core.dir\\src\\frontend\\imu_preintegration.cpp.obj -c C:\\Users\\aaraa\\Visual-Inertial-SLAM-System-With-GPU-Acceleration\\src\\frontend\\imu_preintegration.cpp",
+  "file": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/frontend/imu_preintegration.cpp",
+  "output": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build/CMakeFiles/vislam_core.dir/src/frontend/imu_preintegration.cpp.obj"
+},
+{
+  "directory": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build",
+  "command": "C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang.exe -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\vislam_core.dir\\src\\backend\\optimizer.cpp.obj -c C:\\Users\\aaraa\\Visual-Inertial-SLAM-System-With-GPU-Acceleration\\src\\backend\\optimizer.cpp",
+  "file": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/backend/optimizer.cpp",
+  "output": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build/CMakeFiles/vislam_core.dir/src/backend/optimizer.cpp.obj"
+},
+{
+  "directory": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build",
+  "command": "C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang.exe -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\vislam_core.dir\\src\\backend\\bundle_adjustment.cpp.obj -c C:\\Users\\aaraa\\Visual-Inertial-SLAM-System-With-GPU-Acceleration\\src\\backend\\bundle_adjustment.cpp",
+  "file": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/backend/bundle_adjustment.cpp",
+  "output": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build/CMakeFiles/vislam_core.dir/src/backend/bundle_adjustment.cpp.obj"
+},
+{
+  "directory": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build",
+  "command": "C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang.exe -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\vislam_core.dir\\src\\backend\\pose_graph.cpp.obj -c C:\\Users\\aaraa\\Visual-Inertial-SLAM-System-With-GPU-Acceleration\\src\\backend\\pose_graph.cpp",
+  "file": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/backend/pose_graph.cpp",
+  "output": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build/CMakeFiles/vislam_core.dir/src/backend/pose_graph.cpp.obj"
+},
+{
+  "directory": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build",
+  "command": "C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang.exe -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\vislam_core.dir\\src\\mapping\\triangulation.cpp.obj -c C:\\Users\\aaraa\\Visual-Inertial-SLAM-System-With-GPU-Acceleration\\src\\mapping\\triangulation.cpp",
+  "file": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/mapping/triangulation.cpp",
+  "output": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build/CMakeFiles/vislam_core.dir/src/mapping/triangulation.cpp.obj"
+},
+{
+  "directory": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build",
+  "command": "C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang.exe -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\vislam_core.dir\\src\\mapping\\keyframe.cpp.obj -c C:\\Users\\aaraa\\Visual-Inertial-SLAM-System-With-GPU-Acceleration\\src\\mapping\\keyframe.cpp",
+  "file": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/mapping/keyframe.cpp",
+  "output": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build/CMakeFiles/vislam_core.dir/src/mapping/keyframe.cpp.obj"
+},
+{
+  "directory": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build",
+  "command": "C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang.exe -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\vislam_core.dir\\src\\mapping\\map.cpp.obj -c C:\\Users\\aaraa\\Visual-Inertial-SLAM-System-With-GPU-Acceleration\\src\\mapping\\map.cpp",
+  "file": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/mapping/map.cpp",
+  "output": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build/CMakeFiles/vislam_core.dir/src/mapping/map.cpp.obj"
+},
+{
+  "directory": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build",
+  "command": "C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang.exe -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\vislam_core.dir\\src\\utils\\dataset_loader.cpp.obj -c C:\\Users\\aaraa\\Visual-Inertial-SLAM-System-With-GPU-Acceleration\\src\\utils\\dataset_loader.cpp",
+  "file": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/utils/dataset_loader.cpp",
+  "output": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build/CMakeFiles/vislam_core.dir/src/utils/dataset_loader.cpp.obj"
+},
+{
+  "directory": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build",
+  "command": "C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang.exe -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\vislam_app.dir\\src\\main.cpp.obj -c C:\\Users\\aaraa\\Visual-Inertial-SLAM-System-With-GPU-Acceleration\\src\\main.cpp",
+  "file": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/main.cpp",
+  "output": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build/CMakeFiles/vislam_app.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build",
+  "command": "C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang.exe -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\test_imu.dir\\tests\\test_imu.cpp.obj -c C:\\Users\\aaraa\\Visual-Inertial-SLAM-System-With-GPU-Acceleration\\tests\\test_imu.cpp",
+  "file": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/tests/test_imu.cpp",
+  "output": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build/CMakeFiles/test_imu.dir/tests/test_imu.cpp.obj"
+},
+{
+  "directory": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build",
+  "command": "C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang.exe -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\test_triangulation.dir\\tests\\test_triangulation.cpp.obj -c C:\\Users\\aaraa\\Visual-Inertial-SLAM-System-With-GPU-Acceleration\\tests\\test_triangulation.cpp",
+  "file": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/tests/test_triangulation.cpp",
+  "output": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build/CMakeFiles/test_triangulation.dir/tests/test_triangulation.cpp.obj"
+},
+{
+  "directory": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build",
+  "command": "C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang.exe -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\test_optimizer.dir\\tests\\test_optimizer.cpp.obj -c C:\\Users\\aaraa\\Visual-Inertial-SLAM-System-With-GPU-Acceleration\\tests\\test_optimizer.cpp",
+  "file": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/tests/test_optimizer.cpp",
+  "output": "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build/CMakeFiles/test_optimizer.dir/tests/test_optimizer.cpp.obj"
+}
+]

@@ -1,0 +1,22 @@
+# ninja log v7
+36	200	8111855623734337	CMakeFiles/vislam_core.dir/src/frontend/imu_preintegration.cpp.obj	171d123803b88f92
+127	300	8111855624661254	CMakeFiles/test_imu.dir/tests/test_imu.cpp.obj	f201a6aadf378ba
+137	401	8111855624751075	CMakeFiles/test_triangulation.dir/tests/test_triangulation.cpp.obj	db41e9f56496cf33
+74	415	8111855624120357	CMakeFiles/vislam_core.dir/src/mapping/triangulation.cpp.obj	65f53478d12fc3f5
+54	2397	8111855623921334	CMakeFiles/vislam_core.dir/src/backend/bundle_adjustment.cpp.obj	a1344e384039fc92
+44	2420	8111855623831149	CMakeFiles/vislam_core.dir/src/backend/optimizer.cpp.obj	3c0c54cc5c911e95
+84	2437	8111855624215912	CMakeFiles/vislam_core.dir/src/mapping/keyframe.cpp.obj	bb2fda658fe95a1f
+153	2453	8111855624905747	CMakeFiles/test_optimizer.dir/tests/test_optimizer.cpp.obj	1dbf225ca59acb1e
+29	2468	8111855623660984	CMakeFiles/vislam_core.dir/src/frontend/feature_tracker.cpp.obj	652a861b65ce0486
+63	2481	8111855624011672	CMakeFiles/vislam_core.dir/src/backend/pose_graph.cpp.obj	a5d67126454232de
+19	2499	8111855623562990	CMakeFiles/vislam_core.dir/src/frontend/feature_detector.cpp.obj	6be62a69e24197d8
+93	2541	8111855624315881	CMakeFiles/vislam_core.dir/src/mapping/map.cpp.obj	9a194f838b1b4d37
+105	2932	8111855624436213	CMakeFiles/vislam_core.dir/src/utils/dataset_loader.cpp.obj	a98703c1603fa534
+117	3208	8111855624547652	CMakeFiles/vislam_app.dir/src/main.cpp.obj	86ae3400cd24f977
+2933	3237	8111855652713729	vislam_core.lib	d7b52c4cd0e91949
+3247	3505	8111855655845685	test_imu.exe	63e54721485403bb
+3258	3507	8111855655960188	test_triangulation.exe	327e127631f7f2fd
+3269	3519	8111855656085345	test_optimizer.exe	79f6694592f4374c
+3237	3554	8111855655734180	vislam_app.exe	8eaf92746b19e96c
+35	1340	8111856277654864	CMakeFiles/vislam_app.dir/src/main.cpp.obj	86ae3400cd24f977
+1341	1563	8111856290714935	vislam_app.exe	8eaf92746b19e96c
