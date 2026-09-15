@@ -1,8 +1,14 @@
+#include <algorithm>
 #include <fstream>
 #include <filesystem>
 #include <iostream>
 #include <string>
 #include <vector>
+
+#include <opencv2/core.hpp>
+#include <opencv2/features2d.hpp>
+#include <opencv2/imgproc.hpp>
+#include <opencv2/video/tracking.hpp>
 
 #include "backend/optimizer.hpp"
 #include "frontend/feature_detector.hpp"
@@ -142,20 +148,72 @@ int RunEuroc(const RunConfig& config) {
 		return 1;
 	}
 
-	frontend::ImuPreintegration preint;
-	std::size_t imu_idx = 0;
 	std::vector<std::pair<double, utils::Pose>> trajectory;
 	trajectory.reserve(static_cast<std::size_t>(std::min<int>(config.max_frames, static_cast<int>(images.size()))));
 
+	cv::Mat previous_gray;
+	std::vector<cv::Point2f> previous_points;
+	utils::Pose current_pose {};
+	bool has_previous_frame = false;
 	const int frame_count = std::min<int>(config.max_frames, static_cast<int>(images.size()));
+
 	for (int i = 0; i < frame_count; ++i) {
-		const double frame_ts = images[static_cast<std::size_t>(i)].timestamp_s;
-		while (imu_idx < imus.size() && imus[imu_idx].timestamp_s <= frame_ts) {
-			preint.Integrate(imus[imu_idx]);
-			++imu_idx;
+		const auto& image_info = images[static_cast<std::size_t>(i)];
+		const std::filesystem::path image_path = base_path / image_info.relative_path;
+		if (!std::filesystem::exists(image_path)) {
+			utils::Log(utils::LogLevel::kError, "Missing image file: " + image_path.string());
+			return 1;
 		}
 
-		trajectory.push_back({frame_ts, preint.DeltaPose()});
+		cv::Mat gray = cv::imread(image_path.string(), cv::IMREAD_GRAYSCALE);
+		if (gray.empty()) {
+			utils::Log(utils::LogLevel::kError, "Failed to decode image: " + image_path.string());
+			return 1;
+		}
+
+		if (!has_previous_frame) {
+			cv::goodFeaturesToTrack(gray, previous_points, 200, 0.01, 10.0);
+			previous_gray = gray.clone();
+			has_previous_frame = true;
+			trajectory.push_back({image_info.timestamp_s, current_pose});
+			continue;
+		}
+
+		std::vector<cv::Point2f> current_points;
+		std::vector<uchar> status;
+		std::vector<float> err;
+		cv::calcOpticalFlowPyrLK(previous_gray, gray, previous_points, current_points, status, err, cv::Size(21, 21), 3);
+
+		std::vector<cv::Point2f> valid_prev;
+		std::vector<cv::Point2f> valid_cur;
+		valid_prev.reserve(current_points.size());
+		valid_cur.reserve(current_points.size());
+		for (std::size_t j = 0; j < current_points.size(); ++j) {
+			if (status[j] && err[j] < 25.0f) {
+				valid_prev.push_back(previous_points[j]);
+				valid_cur.push_back(current_points[j]);
+			}
+		}
+
+		if (!valid_cur.empty()) {
+			cv::Point2f mean_delta(0.0f, 0.0f);
+			for (std::size_t j = 0; j < valid_cur.size(); ++j) {
+				mean_delta += valid_cur[j] - valid_prev[j];
+			}
+			mean_delta *= 1.0f / static_cast<float>(valid_cur.size());
+
+			current_pose.position.x += mean_delta.x * 0.001;
+			current_pose.position.y += mean_delta.y * 0.001;
+			current_pose.position.z += 0.0;
+		}
+
+		previous_points = valid_cur;
+		previous_gray = gray.clone();
+		if (previous_points.empty()) {
+			cv::goodFeaturesToTrack(gray, previous_points, 200, 0.01, 10.0);
+		}
+
+		trajectory.push_back({image_info.timestamp_s, current_pose});
 	}
 
 	if (!WriteTrajectory(config.output_path, trajectory)) {

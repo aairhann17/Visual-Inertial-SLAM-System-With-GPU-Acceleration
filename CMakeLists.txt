@@ -6,6 +6,8 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+find_package(OpenCV REQUIRED core imgproc video highgui)
+
 option(VISLAM_BUILD_TESTS "Build unit-style test executables" ON)
 option(VISLAM_ENABLE_CUDA "Build optional CUDA acceleration library" ON)
 
@@ -27,11 +29,7 @@ target_include_directories(vislam_core
 		${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
-target_compile_features(vislam_core PUBLIC cxx_std_17)
-
-add_executable(vislam_app src/main.cpp)
-target_link_libraries(vislam_app PRIVATE vislam_core)
-
+target_link_libraries(vislam_core PUBLIC ${OpenCV_LIBS})
 if(VISLAM_BUILD_TESTS)
 	enable_testing()
 
