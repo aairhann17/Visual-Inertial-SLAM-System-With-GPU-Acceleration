@@ -114,11 +114,31 @@ int RunEuroc(const RunConfig& config) {
 		return 1;
 	}
 
+	const std::filesystem::path base_path(config.path);
+	const std::filesystem::path cam_csv = base_path / "mav0" / "cam0" / "data.csv";
+	const std::filesystem::path imu_csv = base_path / "mav0" / "imu0" / "data.csv";
+	if (!std::filesystem::exists(cam_csv) || !std::filesystem::exists(imu_csv)) {
+		if (!std::filesystem::exists(cam_csv)) {
+			utils::Log(utils::LogLevel::kError, "Missing EuRoC file: " + cam_csv.string());
+		}
+		if (!std::filesystem::exists(imu_csv)) {
+			utils::Log(utils::LogLevel::kError, "Missing EuRoC file: " + imu_csv.string());
+		}
+		utils::Log(utils::LogLevel::kError, "Expected dataset layout: <path>/mav0/cam0/data.csv and <path>/mav0/imu0/data.csv");
+		return 1;
+	}
+
 	utils::DatasetLoader loader(config.path);
 	const auto images = loader.LoadEurocCam0();
 	const auto imus = loader.LoadEurocImu0();
 	if (images.empty() || imus.empty()) {
-		utils::Log(utils::LogLevel::kError, "Failed to load EuRoC camera or IMU data from provided path");
+		if (images.empty()) {
+			utils::Log(utils::LogLevel::kError, "EuRoC camera index parsed as empty: " + cam_csv.string());
+		}
+		if (imus.empty()) {
+			utils::Log(utils::LogLevel::kError, "EuRoC IMU index parsed as empty: " + imu_csv.string());
+		}
+		utils::Log(utils::LogLevel::kError, "Check CSV format and ensure files are not empty or header-only.");
 		return 1;
 	}
 

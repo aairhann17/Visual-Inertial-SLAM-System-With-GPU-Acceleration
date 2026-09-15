@@ -12,11 +12,11 @@
 19	2499	8111855623562990	CMakeFiles/vislam_core.dir/src/frontend/feature_detector.cpp.obj	6be62a69e24197d8
 93	2541	8111855624315881	CMakeFiles/vislam_core.dir/src/mapping/map.cpp.obj	9a194f838b1b4d37
 105	2932	8111855624436213	CMakeFiles/vislam_core.dir/src/utils/dataset_loader.cpp.obj	a98703c1603fa534
-117	3208	8111855624547652	CMakeFiles/vislam_app.dir/src/main.cpp.obj	86ae3400cd24f977
+35	1340	8111856277654864	CMakeFiles/vislam_app.dir/src/main.cpp.obj	86ae3400cd24f977
 2933	3237	8111855652713729	vislam_core.lib	d7b52c4cd0e91949
 3247	3505	8111855655845685	test_imu.exe	63e54721485403bb
 3258	3507	8111855655960188	test_triangulation.exe	327e127631f7f2fd
 3269	3519	8111855656085345	test_optimizer.exe	79f6694592f4374c
-3237	3554	8111855655734180	vislam_app.exe	8eaf92746b19e96c
-35	1340	8111856277654864	CMakeFiles/vislam_app.dir/src/main.cpp.obj	86ae3400cd24f977
 1341	1563	8111856290714935	vislam_app.exe	8eaf92746b19e96c
+42	1437	8111858406053850	CMakeFiles/vislam_app.dir/src/main.cpp.obj	86ae3400cd24f977
+1438	1671	8111858420007015	vislam_app.exe	8eaf92746b19e96c
