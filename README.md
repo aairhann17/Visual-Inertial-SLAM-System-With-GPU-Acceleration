@@ -11,7 +11,6 @@ A research-grade, modular **Visual-Inertial Odometry (VIO) SLAM** system written
 3. [Features](#3-features)
 4. [Tech Stack](#4-tech-stack)
 5. [Datasets](#5-datasets)
-6. [Future Work](#6-future-work)
 
 ---
 
