@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: vislam-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: vislam
+      POSTGRES_PASSWORD: vislam
+      POSTGRES_DB: vislam
+    ports:
+      - "5432:5432"
+    volumes:
+      - vislam_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  vislam_postgres_data:
+

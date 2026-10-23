@@ -11,6 +11,8 @@ A research-grade, modular **Visual-Inertial Odometry (VIO) SLAM** system written
 3. [Features](#3-features)
 4. [Tech Stack](#4-tech-stack)
 5. [Datasets](#5-datasets)
+6. [Full-Stack + ML Extension](#6-full-stack--ml-extension)
+7. [Future Work](#7-future-work)
 
 ---
 
@@ -89,7 +91,7 @@ By tightly coupling these sensors, VIO SLAM achieves state estimation that is fa
 | **Bundle Adjustment** | Joint nonlinear refinement of camera poses and map points |
 | **Pose Graph** | Lightweight pose-graph with edge constraints for global consistency |
 | **Optimizer** | Trajectory smoother with iterative refinement |
-| **Dataset Loader** | Unified reader for EuRoC MAV, KITTI Odometry, and TUM RGB-D formats |
+| **Dataset Loader** | EuRoC MAV loader (current runtime path), plus interfaces prepared for additional dataset formats |
 | **Evaluation Scripts** | Python ATE / RPE metric computation and trajectory plotting |
 
 ---
@@ -178,3 +180,93 @@ ctest --test-dir build -C Debug --output-on-failure
 ## CUDA Note
 
 `VISLAM_ENABLE_CUDA` is enabled by default. If no CUDA compiler is found, CMake skips `gpu/` targets automatically.
+
+---
+
+## 6. Full-Stack + ML Extension
+
+This repository now includes a full-stack foundation that wraps the C++ `vislam_app` executable:
+
+- API service: [services/api/](./services/api/)
+- Web dashboard: [apps/web/](./apps/web/)
+- Database schema: [services/api/src/sql/schema.sql](./services/api/src/sql/schema.sql)
+- Local Postgres compose setup: [docker-compose.yml](./docker-compose.yml)
+
+### 6.1 Backend (Express + PostgreSQL)
+
+The API service orchestrates SLAM runs and stores:
+
+- run lifecycle/status
+- stdout/stderr events
+- parsed trajectory poses
+- frame-level metrics with ML confidence scores
+
+Core endpoints:
+
+- `POST /api/runs` — start run (`dataset`, `datasetPath`, `maxFrames`)
+- `GET /api/runs` — list runs
+- `GET /api/runs/:id` — run status/details
+- `GET /api/runs/:id/trajectory` — trajectory rows
+- `GET /api/runs/:id/metrics` — computed metrics + confidence/risk
+- `GET /api/runs/:id/logs` — persisted run events
+- `GET /api/runs/:id/stream` — Server-Sent Events stream
+- `POST /api/runs/:id/cancel` — request cancellation
+
+### 6.2 ML confidence component
+
+The initial ML component is feature-flagged (`ENABLE_ML_CONFIDENCE=true`) and provides a confidence signal per frame:
+
+- `confidence` in `[0,1]`
+- `driftRisk` classification (`stable`, `warning`, `likely_drift`)
+
+Current implementation supports:
+
+- heuristic scoring out-of-the-box
+- optional external model weights via `ML_CONFIDENCE_MODEL_PATH` JSON
+
+### 6.3 Local setup
+
+1) Start PostgreSQL:
+
+```bash
+docker compose up -d postgres
+```
+
+2) Configure API environment:
+
+- copy [services/api/.env.example](./services/api/.env.example) to `services/api/.env`
+- verify `VISLAM_EXECUTABLE` path points to your built binary
+
+3) Install API dependencies and initialize DB:
+
+```bash
+cd services/api
+npm install
+npm run db:init
+npm run start
+```
+
+4) Configure and run web app:
+
+- copy [apps/web/.env.example](./apps/web/.env.example) to `apps/web/.env`
+
+```bash
+cd apps/web
+npm install
+npm run dev
+```
+
+Open `http://localhost:5173`.
+
+### 6.4 Dataset note
+
+The C++ runtime currently executes the EuRoC path branch (`--dataset euroc`) in `vislam_app`.  
+KITTI and TUM sections above describe expected dataset structures, but end-to-end run orchestration in the current app entrypoint is EuRoC-focused.
+
+---
+
+## 7. Future Work
+
+- Add first-class KITTI/TUM runtime branches in the C++ app orchestration path
+- Replace heuristic confidence with trained model inference pipeline + evaluation harness
+- Add richer trajectory/map visualization (3D viewer + keyframe overlays)

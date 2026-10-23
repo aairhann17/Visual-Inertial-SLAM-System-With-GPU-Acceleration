@@ -1,0 +1,8 @@
+{
+  "base": 3.5,
+  "weights": {
+    "translation_step": -8.0,
+    "estimated_speed": -2.1
+  }
+}
+

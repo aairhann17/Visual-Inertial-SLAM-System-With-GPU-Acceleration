@@ -1,0 +1,11 @@
+build/
+output/
+artifacts/
+services/api/node_modules/
+apps/web/node_modules/
+apps/web/dist/
+*.log
+*.sqlite
+.env
+.DS_Store
+

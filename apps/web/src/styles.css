@@ -1,0 +1,138 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, Segoe UI, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  display: grid;
+  gap: 16px;
+}
+
+.card {
+  border: 1px solid #243049;
+  border-radius: 12px;
+  background: #111c34;
+  padding: 16px;
+}
+
+.grid-form {
+  display: grid;
+  grid-template-columns: 1fr 2fr 120px 140px;
+  gap: 8px;
+  align-items: end;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+input, button {
+  border-radius: 8px;
+  border: 1px solid #334155;
+  padding: 8px 10px;
+  background: #0b1220;
+  color: #e2e8f0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.muted {
+  color: #94a3b8;
+}
+
+.error {
+  color: #f87171;
+}
+
+.runs-table {
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  border-bottom: 1px solid #243049;
+  text-align: left;
+}
+
+tbody tr {
+  cursor: pointer;
+}
+
+tbody tr.selected {
+  background: #1e293b;
+}
+
+.badge {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge.queued {
+  background: #1d4ed8;
+}
+
+.badge.running {
+  background: #0d9488;
+}
+
+.badge.completed {
+  background: #15803d;
+}
+
+.badge.failed {
+  background: #b91c1c;
+}
+
+.badge.cancelled {
+  background: #7c3aed;
+}
+
+.details-grid {
+  display: grid;
+  gap: 8px;
+}
+
+.trajectory-plot {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  border: 1px solid #243049;
+}
+
+.logs {
+  max-height: 300px;
+  overflow: auto;
+  font-family: Consolas, monospace;
+  font-size: 0.88rem;
+  display: grid;
+  gap: 6px;
+}
+
