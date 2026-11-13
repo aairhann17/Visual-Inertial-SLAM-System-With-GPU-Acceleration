@@ -184,6 +184,24 @@ export function App() {
     }
   }
 
+  async function handleScaffoldTestRun() {
+    setLoading(true);
+    try {
+      const created = await createRun({
+        dataset: "scaffold",
+        datasetPath: ".",
+        maxFrames: 20
+      });
+      await refreshRuns();
+      setSelectedRunId(created.runId);
+      setError("");
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  }
+
   async function handleCancel() {
     if (!selectedRunId) return;
     try {
@@ -227,6 +245,14 @@ export function App() {
             {loading ? "Submitting..." : "Start Run"}
           </button>
         </form>
+        <div className="row run-shortcuts">
+          <p className="muted">
+            No EuRoC dataset yet? Use scaffold mode to validate API, DB, and UI pipeline first.
+          </p>
+          <button type="button" className="secondary" disabled={loading} onClick={handleScaffoldTestRun}>
+            {loading ? "Submitting..." : "Use scaffold test run"}
+          </button>
+        </div>
       </section>
 
       <section className="card">

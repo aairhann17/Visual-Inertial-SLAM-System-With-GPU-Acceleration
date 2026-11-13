@@ -67,10 +67,20 @@ button {
   cursor: pointer;
 }
 
+.secondary {
+  background: #1e293b;
+  border-color: #475569;
+}
+
 .row {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.run-shortcuts {
+  margin-top: 10px;
+  gap: 12px;
 }
 
 .muted {
