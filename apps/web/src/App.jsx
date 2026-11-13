@@ -7,7 +7,8 @@ import {
   fetchRunMetrics,
   fetchRuns,
   fetchRunTrajectory,
-  getRunStream
+  getRunStream,
+  validateEurocPath
 } from "./api";
 
 function statusBadge(status) {
@@ -57,12 +58,48 @@ export function App() {
   const [metrics, setMetrics] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [datasetHint, setDatasetHint] = useState("");
+  const [datasetHintKind, setDatasetHintKind] = useState("muted");
 
   const [dataset, setDataset] = useState("euroc");
   const [datasetPath, setDatasetPath] = useState(
     "datasets/euroc/machine_hall/machine_hall/MH_01_easy"
   );
   const [maxFrames, setMaxFrames] = useState(300);
+
+  useEffect(() => {
+    if (dataset !== "euroc") {
+      setDatasetHint("Dataset validation currently runs only for EuRoC.");
+      setDatasetHintKind("muted");
+      return;
+    }
+    if (!datasetPath.trim()) {
+      setDatasetHint("Enter a EuRoC dataset path to validate expected layout.");
+      setDatasetHintKind("warning");
+      return;
+    }
+
+    const timeoutId = setTimeout(() => {
+      validateEurocPath(datasetPath.trim())
+        .then((result) => {
+          if (result.isValid) {
+            setDatasetHint(`EuRoC layout detected at: ${result.detectedEurocRoot}`);
+            setDatasetHintKind("success");
+            return;
+          }
+          setDatasetHint(
+            `${result.reason}. Expected files under: ${result.detectedEurocRoot || result.resolvedInputPath}`
+          );
+          setDatasetHintKind("warning");
+        })
+        .catch((err) => {
+          setDatasetHint(`Path validation failed: ${err.message}`);
+          setDatasetHintKind("warning");
+        });
+    }, 350);
+
+    return () => clearTimeout(timeoutId);
+  }, [dataset, datasetPath]);
 
   async function refreshRuns() {
     const response = await fetchRuns();
@@ -122,6 +159,16 @@ export function App() {
     event.preventDefault();
     setLoading(true);
     try {
+      if (dataset === "euroc") {
+        const validation = await validateEurocPath(datasetPath.trim());
+        if (!validation.isValid) {
+          setError(
+            `Cannot start EuRoC run: ${validation.reason}. Check dataset path and required CSV files.`
+          );
+          return;
+        }
+      }
+
       const created = await createRun({
         dataset,
         datasetPath,
@@ -166,6 +213,7 @@ export function App() {
             Dataset Path
             <input value={datasetPath} onChange={(e) => setDatasetPath(e.target.value)} />
           </label>
+          <p className={`hint ${datasetHintKind}`}>{datasetHint}</p>
           <label>
             Max Frames
             <input
@@ -285,4 +333,3 @@ export function App() {
     </div>
   );
 }
-

@@ -42,6 +42,12 @@ export async function fetchRunLogs(runId) {
   return parseJson(response);
 }
 
+export async function validateEurocPath(datasetPath) {
+  const encodedPath = encodeURIComponent(datasetPath);
+  const response = await fetch(`${API_BASE}/datasets/euroc/validate?path=${encodedPath}`);
+  return parseJson(response);
+}
+
 export async function cancelRun(runId) {
   const response = await fetch(`${API_BASE}/runs/${runId}/cancel`, {
     method: "POST"
@@ -52,4 +58,3 @@ export async function cancelRun(runId) {
 export function getRunStream(runId) {
   return new EventSource(`${API_BASE}/runs/${runId}/stream`);
 }
-

@@ -143,7 +143,16 @@ async function executeRun(run) {
   }
 
   await appendEvent(run.id, "info", "Run completed. Parsing trajectory.");
-  const poses = readTrajectoryFile(run.outputPath);
+  let poses = [];
+  if (fs.existsSync(run.outputPath)) {
+    poses = readTrajectoryFile(run.outputPath);
+  } else {
+    await appendEvent(
+      run.id,
+      "warn",
+      `Trajectory file not found at ${run.outputPath}. Storing run with empty trajectory.`
+    );
+  }
   await replaceRunTrajectory(run.id, poses);
 
   let model = null;
@@ -195,4 +204,3 @@ module.exports = {
   parseRunRequest,
   subscribeToRun
 };
-

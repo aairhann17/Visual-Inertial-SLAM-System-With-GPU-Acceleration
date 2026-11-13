@@ -2,8 +2,10 @@ require("dotenv").config();
 
 const express = require("express");
 const cors = require("cors");
+const fs = require("fs");
+const path = require("path");
 
-const { config } = require("./config");
+const { config, rootDir } = require("./config");
 const { closePool } = require("./db");
 const {
   getRun,
@@ -28,6 +30,81 @@ app.get("/api/health", (_req, res) => {
     status: "ok",
     service: "vislam-api",
     mlConfidenceEnabled: config.enableMlConfidence
+  });
+});
+
+function resolveDatasetPath(rawPath) {
+  return path.isAbsolute(rawPath) ? rawPath : path.resolve(rootDir, rawPath);
+}
+
+function findEurocRoot(candidatePath) {
+  const direct = path.join(candidatePath, "mav0");
+  if (fs.existsSync(direct)) {
+    return candidatePath;
+  }
+
+  const entries = fs.existsSync(candidatePath)
+    ? fs.readdirSync(candidatePath, { withFileTypes: true })
+    : [];
+
+  for (const first of entries) {
+    if (!first.isDirectory()) continue;
+    const firstPath = path.join(candidatePath, first.name);
+    if (fs.existsSync(path.join(firstPath, "mav0"))) {
+      return firstPath;
+    }
+
+    const nested = fs.readdirSync(firstPath, { withFileTypes: true });
+    for (const second of nested) {
+      if (!second.isDirectory()) continue;
+      const secondPath = path.join(firstPath, second.name);
+      if (fs.existsSync(path.join(secondPath, "mav0"))) {
+        return secondPath;
+      }
+    }
+  }
+
+  return candidatePath;
+}
+
+app.get("/api/datasets/euroc/validate", (req, res) => {
+  const rawPath = String(req.query.path || "").trim();
+  if (!rawPath) {
+    return res.status(400).json({
+      isValid: false,
+      reason: "Missing query parameter: path"
+    });
+  }
+
+  const resolvedInputPath = resolveDatasetPath(rawPath);
+  if (!fs.existsSync(resolvedInputPath)) {
+    return res.json({
+      isValid: false,
+      reason: "Provided path does not exist",
+      resolvedInputPath
+    });
+  }
+
+  const eurocRoot = findEurocRoot(resolvedInputPath);
+  const camCsv = path.join(eurocRoot, "mav0", "cam0", "data.csv");
+  const imuCsv = path.join(eurocRoot, "mav0", "imu0", "data.csv");
+  const hasCamCsv = fs.existsSync(camCsv);
+  const hasImuCsv = fs.existsSync(imuCsv);
+  const isValid = hasCamCsv && hasImuCsv;
+
+  return res.json({
+    isValid,
+    reason: isValid
+      ? "EuRoC layout found"
+      : "Expected mav0/cam0/data.csv and mav0/imu0/data.csv",
+    resolvedInputPath,
+    detectedEurocRoot: eurocRoot,
+    checks: {
+      camCsv,
+      imuCsv,
+      hasCamCsv,
+      hasImuCsv
+    }
   });
 });
 
@@ -166,4 +243,3 @@ async function shutdown(signal) {
 
 process.on("SIGINT", () => void shutdown("SIGINT"));
 process.on("SIGTERM", () => void shutdown("SIGTERM"));
-

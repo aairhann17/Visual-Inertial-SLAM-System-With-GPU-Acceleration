@@ -226,6 +226,14 @@ Current implementation supports:
 
 ### 6.3 Local setup
 
+Quick start (one command):
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\run-fullstack.ps1 -InstallDeps
+```
+
+This sets up Postgres, env files, DB schema, and launches API + web servers in new terminals.
+
 1) Start PostgreSQL:
 
 ```bash
