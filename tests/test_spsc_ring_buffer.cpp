@@ -3,10 +3,7 @@
 int main() {
 	vislam::utils::SpscRingBuffer<int, 4> buffer;
 
-	if (!buffer.Empty()) {
-		return 1;
-	}
-	if (!buffer.Push(1) || !buffer.Push(2) || !buffer.Push(3) || buffer.Push(4)) {
+	if (!buffer.Empty() || !buffer.Push(1) || !buffer.Push(2) || !buffer.Push(3) || buffer.Push(4)) {
 		return 1;
 	}
 

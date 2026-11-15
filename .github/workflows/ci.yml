@@ -20,13 +20,13 @@ jobs:
       - name: Configure
         run: |
           rm -rf build
-          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DVISLAM_ENABLE_CUDA=OFF -DVISLAM_BUILD_TESTS=ON -DVISLAM_ENABLE_STRICT_WARNINGS=ON
+          cmake -S . -B build-ci -DCMAKE_BUILD_TYPE=Release -DVISLAM_ENABLE_CUDA=OFF -DVISLAM_BUILD_TESTS=ON -DVISLAM_ENABLE_STRICT_WARNINGS=ON
 
       - name: Build
-        run: cmake --build build --config Release -j$(nproc)
+        run: cmake --build build-ci --config Release -j$(nproc)
 
       - name: Run C++ tests
-        run: ctest --test-dir build --output-on-failure
+        run: ctest --test-dir build-ci --output-on-failure
 
   cpp-sanitizers:
     runs-on: ubuntu-latest

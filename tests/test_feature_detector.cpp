@@ -9,18 +9,12 @@ int main() {
 	}
 
 	const auto features = detector.Detect({}, 640, 480);
-	if (features.empty()) {
-		return 1;
-	}
-	if (features.size() > 200) {
+	if (features.empty() || features.size() > 200) {
 		return 1;
 	}
 
 	for (const auto& feature : features) {
-		if (!(feature.x > 0.0 && feature.x < 640.0)) {
-			return 1;
-		}
-		if (!(feature.y > 0.0 && feature.y < 480.0)) {
+		if (feature.x <= 0.0 || feature.x >= 640.0 || feature.y <= 0.0 || feature.y >= 480.0) {
 			return 1;
 		}
 	}
