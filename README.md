@@ -4,6 +4,8 @@
 
 A modular C++17 Visual-Inertial SLAM/VIO project with optional CUDA acceleration, plus a full-stack orchestration layer (Express + PostgreSQL + React dashboard) for running, monitoring, and inspecting SLAM jobs.
 
+![Scaffold demo](./docs/media/scaffold-demo.gif)
+
 ---
 
 ## Table of Contents
@@ -38,6 +40,7 @@ A modular C++17 Visual-Inertial SLAM/VIO project with optional CUDA acceleration
 - Triangulation and map management
 - Backend optimization scaffolding
 - Tracking health state machine with degraded/recovery transitions
+- Structured logger abstraction with `spdlog` backend (fallback to stdout logger when unavailable)
 - EuRoC runtime path in the current executable flow
 
 Main executable:
@@ -74,8 +77,10 @@ Main executable:
 │  ├─ run-fullstack.ps1      # One-command full-stack bootstrap/start
 │  ├─ evaluate_ate_rpe.py
 │  ├─ plot_trajectory.py
-│  └─ benchmarks/
+│  ├─ benchmarks/
 │     └─ benchmark_runtime.py
+│  └─ media/
+│     └─ generate_scaffold_demo_gif.py
 ├─ services/
 │  └─ api/                   # Express API + PostgreSQL integration
 ├─ apps/
@@ -86,7 +91,8 @@ Main executable:
 ├─ Dockerfile                # API/runtime image (multi-stage, builds vislam_app)
 ├─ docker-compose.yml        # Full stack (postgres + api + web)
 ├─ docker-compose.gpu.yml    # GPU override for API service
-└─ BENCHMARKS.md             # Latest benchmark summary
+├─ BENCHMARKS.md             # Latest benchmark summary
+└─ docs/media/               # Visual demo assets for portfolio/readme
 ```
 
 ---
@@ -391,6 +397,28 @@ Latest committed results:
 ctest --test-dir build -C Debug --output-on-failure
 ```
 
+### ASan + UBSan local run (Linux/WSL)
+
+```bash
+cmake -S . -B build-sanitized \
+  -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+  -DVISLAM_ENABLE_CUDA=OFF \
+  -DVISLAM_ENABLE_STRICT_WARNINGS=ON \
+  -DVISLAM_BUILD_TESTS=ON \
+  -DCMAKE_CXX_FLAGS="-fsanitize=address,undefined -fno-omit-frame-pointer" \
+  -DCMAKE_EXE_LINKER_FLAGS="-fsanitize=address,undefined"
+cmake --build build-sanitized -j$(nproc)
+ctest --test-dir build-sanitized --output-on-failure
+```
+
+### Valgrind leak-check run (Linux/WSL)
+
+```bash
+cmake -S . -B build-valgrind -DCMAKE_BUILD_TYPE=RelWithDebInfo -DVISLAM_ENABLE_CUDA=OFF -DVISLAM_BUILD_TESTS=ON
+cmake --build build-valgrind -j$(nproc)
+valgrind --leak-check=full --show-leak-kinds=all --error-exitcode=1 ./build-valgrind/test_imu
+```
+
 ### Frontend build check
 
 ```powershell
@@ -413,9 +441,17 @@ GitHub Actions workflow:
 Current CI jobs:
 
 - C++ configure/build/test (`ctest`)
+- C++ AddressSanitizer + UndefinedBehaviorSanitizer build/test job
+- C++ Valgrind leak-check job on representative tests
 - API dependency/schema/syntax checks
 - Web production build
 - C++ job enforces strict warning policy (`-Wall -Wextra -Wpedantic -Werror` / `/W4 /WX`)
+
+### Regenerate README demo GIF
+
+```powershell
+python .\scripts\media\generate_scaffold_demo_gif.py
+```
 
 ---
 

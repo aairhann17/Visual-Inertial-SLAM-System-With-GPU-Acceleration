@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     cmake \
     libopencv-dev \
+    libspdlog-dev \
     pkg-config \
     && rm -rf /var/lib/apt/lists/*
 
@@ -28,6 +29,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     gnupg \
     libopencv-dev \
+    libspdlog-dev \
     nodejs \
     npm \
     && rm -rf /var/lib/apt/lists/*

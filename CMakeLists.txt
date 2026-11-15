@@ -8,6 +8,9 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 option(VISLAM_ENABLE_STRICT_WARNINGS "Enable strict compiler warnings as errors" ON)
 option(VISLAM_ENABLE_ROS2 "Build ROS2 lifecycle managed node target" OFF)
+option(VISLAM_BUILD_TESTS "Build unit-style test executables" ON)
+option(VISLAM_ENABLE_CUDA "Build optional CUDA acceleration library" ON)
+option(VISLAM_USE_SPDLOG "Use spdlog-backed structured logging" ON)
 
 if(NOT DEFINED OpenCV_DIR)
     if(DEFINED ENV{VCPKG_INSTALLED_DIR})
@@ -18,9 +21,9 @@ if(NOT DEFINED OpenCV_DIR)
 endif()
 
 find_package(OpenCV REQUIRED CONFIG COMPONENTS core imgproc imgcodecs video videoio highgui)
-
-option(VISLAM_BUILD_TESTS "Build unit-style test executables" ON)
-option(VISLAM_ENABLE_CUDA "Build optional CUDA acceleration library" ON)
+if(VISLAM_USE_SPDLOG)
+	find_package(spdlog QUIET)
+endif()
 
 add_library(vislam_core STATIC
 	src/frontend/feature_detector.cpp
@@ -42,6 +45,19 @@ target_include_directories(vislam_core
 )
 
 target_link_libraries(vislam_core PUBLIC ${OpenCV_LIBS})
+if(VISLAM_USE_SPDLOG AND spdlog_FOUND)
+	if(TARGET spdlog::spdlog_header_only)
+		target_link_libraries(vislam_core PUBLIC spdlog::spdlog_header_only)
+	else()
+		target_link_libraries(vislam_core PUBLIC spdlog::spdlog)
+	endif()
+	target_compile_definitions(vislam_core PUBLIC VISLAM_HAS_SPDLOG=1)
+else()
+	target_compile_definitions(vislam_core PUBLIC VISLAM_HAS_SPDLOG=0)
+	if(VISLAM_USE_SPDLOG)
+		message(WARNING "VISLAM_USE_SPDLOG=ON but spdlog was not found; falling back to std::cout logging.")
+	endif()
+endif()
 
 function(vislam_enable_warnings target_name)
 	if(NOT VISLAM_ENABLE_STRICT_WARNINGS)
