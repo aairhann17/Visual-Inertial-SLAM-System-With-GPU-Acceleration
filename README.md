@@ -1,5 +1,7 @@
 # Visual-Inertial SLAM System With GPU Acceleration
 
+[![CI](https://github.com/aairhann17/Visual-Inertial-SLAM-System-With-GPU-Acceleration/actions/workflows/ci.yml/badge.svg)](https://github.com/aairhann17/Visual-Inertial-SLAM-System-With-GPU-Acceleration/actions/workflows/ci.yml)
+
 A modular C++17 Visual-Inertial SLAM/VIO project with optional CUDA acceleration, plus a full-stack orchestration layer (Express + PostgreSQL + React dashboard) for running, monitoring, and inspecting SLAM jobs.
 
 ---
@@ -31,9 +33,11 @@ A modular C++17 Visual-Inertial SLAM/VIO project with optional CUDA acceleration
 ### 1) Native SLAM runtime (C++)
 
 - Feature detection/tracking
+- Lock-free IMU ingestion ring buffer (SPSC) for deterministic sensor handoff
 - IMU preintegration
 - Triangulation and map management
 - Backend optimization scaffolding
+- Tracking health state machine with degraded/recovery transitions
 - EuRoC runtime path in the current executable flow
 
 Main executable:
@@ -140,6 +144,7 @@ Artifacts (artifacts/runs/<runId>/trajectory.txt)
 ### Optional
 
 - CUDA toolkit for GPU targets
+- ROS 2 (for lifecycle node target)
 
 ---
 
@@ -252,6 +257,17 @@ API environment file: `services/api/.env`
 | `ARTIFACTS_DIR` | Run output storage root | `artifacts\runs` |
 | `ENABLE_ML_CONFIDENCE` | Enable confidence/risk generation | `true` |
 | `ML_CONFIDENCE_MODEL_PATH` | Optional JSON weights file for confidence scoring | unset |
+
+### 6) ROS 2 lifecycle node (optional)
+
+Enable and build the managed lifecycle node:
+
+```powershell
+cmake -S . -B build -DVISLAM_ENABLE_ROS2=ON
+cmake --build build --config Debug --target vislam_ros2_lifecycle_node
+```
+
+If ROS 2 `rclcpp` / `rclcpp_lifecycle` packages are unavailable, CMake skips this target with a warning.
 
 ---
 
@@ -399,6 +415,7 @@ Current CI jobs:
 - C++ configure/build/test (`ctest`)
 - API dependency/schema/syntax checks
 - Web production build
+- C++ job enforces strict warning policy (`-Wall -Wextra -Wpedantic -Werror` / `/W4 /WX`)
 
 ---
 

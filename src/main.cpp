@@ -14,10 +14,12 @@
 #include "backend/optimizer.hpp"
 #include "frontend/feature_detector.hpp"
 #include "frontend/imu_preintegration.hpp"
+#include "frontend/tracking_health_state_machine.hpp"
 #include "mapping/map.hpp"
 #include "mapping/triangulation.hpp"
 #include "utils/dataset_loader.hpp"
 #include "utils/logging.hpp"
+#include "utils/spsc_ring_buffer.hpp"
 
 namespace {
 
@@ -81,6 +83,22 @@ bool WriteTrajectory(
 			<< pose.orientation.w << "\n";
 	}
 	return true;
+}
+
+const char* ToString(const vislam::frontend::TrackingHealthState state) {
+	using vislam::frontend::TrackingHealthState;
+	switch (state) {
+		case TrackingHealthState::kInitializing:
+			return "initializing";
+		case TrackingHealthState::kTracking:
+			return "tracking";
+		case TrackingHealthState::kDegraded:
+			return "degraded";
+		case TrackingHealthState::kRecovering:
+			return "recovering";
+		default:
+			return "unknown";
+	}
 }
 
 int RunScaffold() {
@@ -155,11 +173,34 @@ int RunEuroc(const RunConfig& config) {
 	cv::Mat previous_gray;
 	std::vector<cv::Point2f> previous_points;
 	utils::Pose current_pose {};
+	frontend::ImuPreintegration imu_preintegration;
+	frontend::TrackingHealthStateMachine health_state_machine({});
+	auto last_health_state = health_state_machine.State();
+	utils::SpscRingBuffer<utils::ImuMeasurement, 8192> imu_ring_buffer;
+	std::size_t next_imu_index = 0;
+	std::size_t dropped_imu_samples = 0;
 	bool has_previous_frame = false;
 	const int frame_count = std::min<int>(config.max_frames, static_cast<int>(images.size()));
 
 	for (int i = 0; i < frame_count; ++i) {
 		const auto& image_info = images[static_cast<std::size_t>(i)];
+
+		while (next_imu_index < imus.size() && imus[next_imu_index].timestamp_s <= image_info.timestamp_s) {
+			if (!imu_ring_buffer.Push(imus[next_imu_index])) {
+				(void)imu_ring_buffer.Pop();
+				if (!imu_ring_buffer.Push(imus[next_imu_index])) {
+					dropped_imu_samples += 1;
+				}
+			}
+			next_imu_index += 1;
+		}
+
+		std::size_t imu_samples_integrated = 0;
+		for (auto sample = imu_ring_buffer.Pop(); sample.has_value(); sample = imu_ring_buffer.Pop()) {
+			imu_preintegration.Integrate(*sample);
+			imu_samples_integrated += 1;
+		}
+
 		const std::filesystem::path image_path = base_path / image_info.relative_path;
 		if (!std::filesystem::exists(image_path)) {
 			utils::Log(utils::LogLevel::kError, "Missing image file: " + image_path.string());
@@ -196,6 +237,27 @@ int RunEuroc(const RunConfig& config) {
 			}
 		}
 
+		const auto health_decision = health_state_machine.Update(valid_cur.size(), imu_samples_integrated);
+		if (health_decision.state_changed) {
+			utils::Log(
+				utils::LogLevel::kWarning,
+				"Tracking state transitioned " + std::string(ToString(last_health_state)) + " -> " +
+					ToString(health_decision.state));
+			last_health_state = health_decision.state;
+		}
+		if (health_decision.warning_code != nullptr) {
+			utils::Log(
+				utils::LogLevel::kWarning,
+				"Tracking degraded warning code: " + std::string(health_decision.warning_code));
+		}
+		if (health_decision.should_reinitialize_features) {
+			cv::goodFeaturesToTrack(gray, previous_points, 200, 0.01, 10.0);
+			previous_gray = gray.clone();
+			imu_preintegration.Reset();
+			trajectory.push_back({image_info.timestamp_s, current_pose});
+			continue;
+		}
+
 		if (!valid_cur.empty()) {
 			cv::Point2f mean_delta(0.0f, 0.0f);
 			for (std::size_t j = 0; j < valid_cur.size(); ++j) {
@@ -205,7 +267,8 @@ int RunEuroc(const RunConfig& config) {
 
 			current_pose.position.x += mean_delta.x * 0.001;
 			current_pose.position.y += mean_delta.y * 0.001;
-			current_pose.position.z += 0.0;
+			const auto& imu_delta = imu_preintegration.DeltaPose().position;
+			current_pose.position.z += imu_delta.z * 0.0001;
 		}
 
 		previous_points = valid_cur;
@@ -225,6 +288,7 @@ int RunEuroc(const RunConfig& config) {
 	utils::Log(utils::LogLevel::kInfo, "EuRoC run complete");
 	std::cout << "Loaded images: " << images.size() << "\n";
 	std::cout << "Loaded imu: " << imus.size() << "\n";
+	std::cout << "Dropped imu samples: " << dropped_imu_samples << "\n";
 	std::cout << "Written poses: " << trajectory.size() << "\n";
 	std::cout << "Trajectory output: " << config.output_path << "\n";
 	return 0;
