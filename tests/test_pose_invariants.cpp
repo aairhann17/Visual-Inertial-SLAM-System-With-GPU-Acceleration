@@ -19,16 +19,19 @@ int main() {
 	trajectory[2].position = {10.0, -2.0, 1.0};
 
 	for (const auto& pose : trajectory) {
-		assert(std::abs(QuaternionNorm(pose.orientation) - 1.0) < 1e-12);
+		if (std::abs(QuaternionNorm(pose.orientation) - 1.0) >= 1e-12) {
+			return 1;
+		}
 	}
 
 	vislam::backend::Optimizer optimizer;
 	optimizer.OptimizeTrajectory(trajectory);
 
 	for (const auto& pose : trajectory) {
-		assert(std::abs(QuaternionNorm(pose.orientation) - 1.0) < 1e-12);
+		if (std::abs(QuaternionNorm(pose.orientation) - 1.0) >= 1e-12) {
+			return 1;
+		}
 	}
 
 	return 0;
 }
-

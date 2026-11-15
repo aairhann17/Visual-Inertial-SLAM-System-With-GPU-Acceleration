@@ -8,6 +8,5 @@ int main() {
 	preint.Integrate({0.01, {1.0, 0.0, 0.0}, {0.0, 0.0, 0.0}});
 
 	const auto& dp = preint.DeltaPose();
-	assert(dp.position.x > 0.0);
-	return 0;
+	return (dp.position.x > 0.0) ? 0 : 1;
 }

@@ -6,19 +6,20 @@ int main() {
 	vislam::frontend::FeatureDetector detector(200);
 
 	const auto invalid = detector.Detect({}, 0, 480);
-	assert(invalid.empty());
+	if (!invalid.empty()) {
+		return 1;
+	}
 
 	const auto features = detector.Detect({}, 640, 480);
-	assert(!features.empty());
-	assert(features.size() <= 200);
+	if (features.empty() || features.size() > 200) {
+		return 1;
+	}
 
 	for (const auto& feature : features) {
-		assert(feature.x > 0.0);
-		assert(feature.x < 640.0);
-		assert(feature.y > 0.0);
-		assert(feature.y < 480.0);
+		if (feature.x <= 0.0 || feature.x >= 640.0 || feature.y <= 0.0 || feature.y >= 480.0) {
+			return 1;
+		}
 	}
 
 	return 0;
 }
-
