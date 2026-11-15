@@ -18,7 +18,9 @@ jobs:
           sudo apt-get install -y --no-install-recommends cmake g++ libopencv-dev libspdlog-dev pkg-config
 
       - name: Configure
-        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DVISLAM_ENABLE_CUDA=OFF -DVISLAM_BUILD_TESTS=ON -DVISLAM_ENABLE_STRICT_WARNINGS=ON
+        run: |
+          rm -rf build
+          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DVISLAM_ENABLE_CUDA=OFF -DVISLAM_BUILD_TESTS=ON -DVISLAM_ENABLE_STRICT_WARNINGS=ON
 
       - name: Build
         run: cmake --build build --config Release -j$(nproc)
@@ -143,4 +145,3 @@ jobs:
       - name: Build web app
         working-directory: apps/web
         run: npm run build
-
