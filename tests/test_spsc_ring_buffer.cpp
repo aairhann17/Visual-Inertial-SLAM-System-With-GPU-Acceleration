@@ -1,5 +1,3 @@
-#include <cassert>
-
 #include "utils/spsc_ring_buffer.hpp"
 
 int main() {
@@ -31,5 +29,8 @@ int main() {
 		return 1;
 	}
 
-	return buffer.Empty() ? 0 : 1;
+	if (!buffer.Empty()) {
+		return 1;
+	}
+	return 0;
 }

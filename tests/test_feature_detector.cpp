@@ -1,5 +1,3 @@
-#include <cassert>
-
 #include "frontend/feature_detector.hpp"
 
 int main() {

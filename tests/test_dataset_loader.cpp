@@ -1,5 +1,3 @@
-#include <cassert>
-
 #include "utils/dataset_loader.hpp"
 
 int main() {
@@ -8,8 +6,11 @@ int main() {
 	const auto images = loader.LoadEurocCam0();
 	const auto imu = loader.LoadEurocImu0();
 
-	assert(images.empty());
-	assert(imu.empty());
+	if (!images.empty()) {
+		return 1;
+	}
+	if (!imu.empty()) {
+		return 1;
+	}
 	return 0;
 }
-
