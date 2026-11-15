@@ -1,48 +1,33 @@
-Start testing: Nov 15 13:58 Eastern Standard Time
+Start testing: Nov 15 16:16 Eastern Standard Time
 ----------------------------------------------------------
-4/6 Testing: test_feature_detector
-4/6 Test: test_feature_detector
-Command: "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build/test_feature_detector.exe"
+7/8 Testing: test_spsc_ring_buffer
+7/8 Test: test_spsc_ring_buffer
+Command: "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build/test_spsc_ring_buffer.exe"
 Directory: C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build
-"test_feature_detector" start time: Nov 15 13:58 Eastern Standard Time
+"test_spsc_ring_buffer" start time: Nov 15 16:16 Eastern Standard Time
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.57 sec
 ----------------------------------------------------------
 Test Passed.
-"test_feature_detector" end time: Nov 15 13:58 Eastern Standard Time
-"test_feature_detector" time elapsed: 00:00:00
+"test_spsc_ring_buffer" end time: Nov 15 16:16 Eastern Standard Time
+"test_spsc_ring_buffer" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-5/6 Testing: test_pose_invariants
-5/6 Test: test_pose_invariants
-Command: "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build/test_pose_invariants.exe"
+8/8 Testing: test_tracking_health_state_machine
+8/8 Test: test_tracking_health_state_machine
+Command: "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build/test_tracking_health_state_machine.exe"
 Directory: C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build
-"test_pose_invariants" start time: Nov 15 13:58 Eastern Standard Time
+"test_tracking_health_state_machine" start time: Nov 15 16:16 Eastern Standard Time
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   1.04 sec
+Test time =   0.11 sec
 ----------------------------------------------------------
 Test Passed.
-"test_pose_invariants" end time: Nov 15 13:58 Eastern Standard Time
-"test_pose_invariants" time elapsed: 00:00:01
+"test_tracking_health_state_machine" end time: Nov 15 16:16 Eastern Standard Time
+"test_tracking_health_state_machine" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-6/6 Testing: test_dataset_loader
-6/6 Test: test_dataset_loader
-Command: "C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build/test_dataset_loader.exe"
-Directory: C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build
-"test_dataset_loader" start time: Nov 15 13:58 Eastern Standard Time
-Output:
-----------------------------------------------------------
-<end of output>
-Test time =   0.46 sec
-----------------------------------------------------------
-Test Passed.
-"test_dataset_loader" end time: Nov 15 13:58 Eastern Standard Time
-"test_dataset_loader" time elapsed: 00:00:00
-----------------------------------------------------------
-
-End testing: Nov 15 13:58 Eastern Standard Time
+End testing: Nov 15 16:16 Eastern Standard Time

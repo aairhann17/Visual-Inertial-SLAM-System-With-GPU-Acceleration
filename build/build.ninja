@@ -52,7 +52,7 @@ build cmake_object_order_depends_target_vislam_core: phony || .
 build CMakeFiles/vislam_core.dir/src/frontend/feature_detector.cpp.obj: CXX_COMPILER__vislam_core_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/frontend/feature_detector.cpp || cmake_object_order_depends_target_vislam_core
   CONFIG = Debug
   DEP_FILE = CMakeFiles\vislam_core.dir\src\frontend\feature_detector.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
+  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\vislam_core.dir
   OBJECT_FILE_DIR = CMakeFiles\vislam_core.dir\src\frontend
@@ -63,7 +63,7 @@ build CMakeFiles/vislam_core.dir/src/frontend/feature_detector.cpp.obj: CXX_COMP
 build CMakeFiles/vislam_core.dir/src/frontend/feature_tracker.cpp.obj: CXX_COMPILER__vislam_core_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/frontend/feature_tracker.cpp || cmake_object_order_depends_target_vislam_core
   CONFIG = Debug
   DEP_FILE = CMakeFiles\vislam_core.dir\src\frontend\feature_tracker.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
+  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\vislam_core.dir
   OBJECT_FILE_DIR = CMakeFiles\vislam_core.dir\src\frontend
@@ -74,7 +74,18 @@ build CMakeFiles/vislam_core.dir/src/frontend/feature_tracker.cpp.obj: CXX_COMPI
 build CMakeFiles/vislam_core.dir/src/frontend/imu_preintegration.cpp.obj: CXX_COMPILER__vislam_core_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/frontend/imu_preintegration.cpp || cmake_object_order_depends_target_vislam_core
   CONFIG = Debug
   DEP_FILE = CMakeFiles\vislam_core.dir\src\frontend\imu_preintegration.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
+  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
+  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
+  OBJECT_DIR = CMakeFiles\vislam_core.dir
+  OBJECT_FILE_DIR = CMakeFiles\vislam_core.dir\src\frontend
+  TARGET_COMPILE_PDB = CMakeFiles\vislam_core.dir\vislam_core.pdb
+  TARGET_PDB = vislam_core.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\vislam_core.dir
+
+build CMakeFiles/vislam_core.dir/src/frontend/tracking_health_state_machine.cpp.obj: CXX_COMPILER__vislam_core_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/frontend/tracking_health_state_machine.cpp || cmake_object_order_depends_target_vislam_core
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\vislam_core.dir\src\frontend\tracking_health_state_machine.cpp.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\vislam_core.dir
   OBJECT_FILE_DIR = CMakeFiles\vislam_core.dir\src\frontend
@@ -85,7 +96,7 @@ build CMakeFiles/vislam_core.dir/src/frontend/imu_preintegration.cpp.obj: CXX_CO
 build CMakeFiles/vislam_core.dir/src/backend/optimizer.cpp.obj: CXX_COMPILER__vislam_core_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/backend/optimizer.cpp || cmake_object_order_depends_target_vislam_core
   CONFIG = Debug
   DEP_FILE = CMakeFiles\vislam_core.dir\src\backend\optimizer.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
+  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\vislam_core.dir
   OBJECT_FILE_DIR = CMakeFiles\vislam_core.dir\src\backend
@@ -96,7 +107,7 @@ build CMakeFiles/vislam_core.dir/src/backend/optimizer.cpp.obj: CXX_COMPILER__vi
 build CMakeFiles/vislam_core.dir/src/backend/bundle_adjustment.cpp.obj: CXX_COMPILER__vislam_core_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/backend/bundle_adjustment.cpp || cmake_object_order_depends_target_vislam_core
   CONFIG = Debug
   DEP_FILE = CMakeFiles\vislam_core.dir\src\backend\bundle_adjustment.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
+  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\vislam_core.dir
   OBJECT_FILE_DIR = CMakeFiles\vislam_core.dir\src\backend
@@ -107,7 +118,7 @@ build CMakeFiles/vislam_core.dir/src/backend/bundle_adjustment.cpp.obj: CXX_COMP
 build CMakeFiles/vislam_core.dir/src/backend/pose_graph.cpp.obj: CXX_COMPILER__vislam_core_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/backend/pose_graph.cpp || cmake_object_order_depends_target_vislam_core
   CONFIG = Debug
   DEP_FILE = CMakeFiles\vislam_core.dir\src\backend\pose_graph.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
+  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\vislam_core.dir
   OBJECT_FILE_DIR = CMakeFiles\vislam_core.dir\src\backend
@@ -118,7 +129,7 @@ build CMakeFiles/vislam_core.dir/src/backend/pose_graph.cpp.obj: CXX_COMPILER__v
 build CMakeFiles/vislam_core.dir/src/mapping/triangulation.cpp.obj: CXX_COMPILER__vislam_core_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/mapping/triangulation.cpp || cmake_object_order_depends_target_vislam_core
   CONFIG = Debug
   DEP_FILE = CMakeFiles\vislam_core.dir\src\mapping\triangulation.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
+  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\vislam_core.dir
   OBJECT_FILE_DIR = CMakeFiles\vislam_core.dir\src\mapping
@@ -129,7 +140,7 @@ build CMakeFiles/vislam_core.dir/src/mapping/triangulation.cpp.obj: CXX_COMPILER
 build CMakeFiles/vislam_core.dir/src/mapping/keyframe.cpp.obj: CXX_COMPILER__vislam_core_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/mapping/keyframe.cpp || cmake_object_order_depends_target_vislam_core
   CONFIG = Debug
   DEP_FILE = CMakeFiles\vislam_core.dir\src\mapping\keyframe.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
+  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\vislam_core.dir
   OBJECT_FILE_DIR = CMakeFiles\vislam_core.dir\src\mapping
@@ -140,7 +151,7 @@ build CMakeFiles/vislam_core.dir/src/mapping/keyframe.cpp.obj: CXX_COMPILER__vis
 build CMakeFiles/vislam_core.dir/src/mapping/map.cpp.obj: CXX_COMPILER__vislam_core_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/mapping/map.cpp || cmake_object_order_depends_target_vislam_core
   CONFIG = Debug
   DEP_FILE = CMakeFiles\vislam_core.dir\src\mapping\map.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
+  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\vislam_core.dir
   OBJECT_FILE_DIR = CMakeFiles\vislam_core.dir\src\mapping
@@ -151,7 +162,7 @@ build CMakeFiles/vislam_core.dir/src/mapping/map.cpp.obj: CXX_COMPILER__vislam_c
 build CMakeFiles/vislam_core.dir/src/utils/dataset_loader.cpp.obj: CXX_COMPILER__vislam_core_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/utils/dataset_loader.cpp || cmake_object_order_depends_target_vislam_core
   CONFIG = Debug
   DEP_FILE = CMakeFiles\vislam_core.dir\src\utils\dataset_loader.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
+  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\vislam_core.dir
   OBJECT_FILE_DIR = CMakeFiles\vislam_core.dir\src\utils
@@ -167,7 +178,7 @@ build CMakeFiles/vislam_core.dir/src/utils/dataset_loader.cpp.obj: CXX_COMPILER_
 #############################################
 # Link the static library vislam_core.lib
 
-build vislam_core.lib: CXX_STATIC_LIBRARY_LINKER__vislam_core_Debug CMakeFiles/vislam_core.dir/src/frontend/feature_detector.cpp.obj CMakeFiles/vislam_core.dir/src/frontend/feature_tracker.cpp.obj CMakeFiles/vislam_core.dir/src/frontend/imu_preintegration.cpp.obj CMakeFiles/vislam_core.dir/src/backend/optimizer.cpp.obj CMakeFiles/vislam_core.dir/src/backend/bundle_adjustment.cpp.obj CMakeFiles/vislam_core.dir/src/backend/pose_graph.cpp.obj CMakeFiles/vislam_core.dir/src/mapping/triangulation.cpp.obj CMakeFiles/vislam_core.dir/src/mapping/keyframe.cpp.obj CMakeFiles/vislam_core.dir/src/mapping/map.cpp.obj CMakeFiles/vislam_core.dir/src/utils/dataset_loader.cpp.obj
+build vislam_core.lib: CXX_STATIC_LIBRARY_LINKER__vislam_core_Debug CMakeFiles/vislam_core.dir/src/frontend/feature_detector.cpp.obj CMakeFiles/vislam_core.dir/src/frontend/feature_tracker.cpp.obj CMakeFiles/vislam_core.dir/src/frontend/imu_preintegration.cpp.obj CMakeFiles/vislam_core.dir/src/frontend/tracking_health_state_machine.cpp.obj CMakeFiles/vislam_core.dir/src/backend/optimizer.cpp.obj CMakeFiles/vislam_core.dir/src/backend/bundle_adjustment.cpp.obj CMakeFiles/vislam_core.dir/src/backend/pose_graph.cpp.obj CMakeFiles/vislam_core.dir/src/mapping/triangulation.cpp.obj CMakeFiles/vislam_core.dir/src/mapping/keyframe.cpp.obj CMakeFiles/vislam_core.dir/src/mapping/map.cpp.obj CMakeFiles/vislam_core.dir/src/utils/dataset_loader.cpp.obj
   CONFIG = Debug
   LANGUAGE_COMPILE_FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
   OBJECT_DIR = CMakeFiles\vislam_core.dir
@@ -190,7 +201,7 @@ build cmake_object_order_depends_target_vislam_app: phony || cmake_object_order_
 build CMakeFiles/vislam_app.dir/src/main.cpp.obj: CXX_COMPILER__vislam_app_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/main.cpp || cmake_object_order_depends_target_vislam_app
   CONFIG = Debug
   DEP_FILE = CMakeFiles\vislam_app.dir\src\main.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
+  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\vislam_app.dir
   OBJECT_FILE_DIR = CMakeFiles\vislam_app.dir\src
@@ -206,11 +217,11 @@ build CMakeFiles/vislam_app.dir/src/main.cpp.obj: CXX_COMPILER__vislam_app_unsca
 #############################################
 # Link the executable vislam_app.exe
 
-build vislam_app.exe: CXX_EXECUTABLE_LINKER__vislam_app_Debug CMakeFiles/vislam_app.dir/src/main.cpp.obj | vislam_core.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib || vislam_core.lib
+build vislam_app.exe: CXX_EXECUTABLE_LINKER__vislam_app_Debug CMakeFiles/vislam_app.dir/src/main.cpp.obj | vislam_core.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_video4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_dnn4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_calib3d4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_features2d4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_flann4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib || vislam_core.lib
   CONFIG = Debug
   FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
   LINK_FLAGS = -Xlinker /subsystem:console -fuse-ld=lld-link
-  LINK_LIBRARIES = vislam_core.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
+  LINK_LIBRARIES = vislam_core.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_video4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_dnn4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_calib3d4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_features2d4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_flann4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
   OBJECT_DIR = CMakeFiles\vislam_app.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -232,7 +243,7 @@ build cmake_object_order_depends_target_test_imu: phony || cmake_object_order_de
 build CMakeFiles/test_imu.dir/tests/test_imu.cpp.obj: CXX_COMPILER__test_imu_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/tests/test_imu.cpp || cmake_object_order_depends_target_test_imu
   CONFIG = Debug
   DEP_FILE = CMakeFiles\test_imu.dir\tests\test_imu.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
+  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\test_imu.dir
   OBJECT_FILE_DIR = CMakeFiles\test_imu.dir\tests
@@ -248,11 +259,11 @@ build CMakeFiles/test_imu.dir/tests/test_imu.cpp.obj: CXX_COMPILER__test_imu_uns
 #############################################
 # Link the executable test_imu.exe
 
-build test_imu.exe: CXX_EXECUTABLE_LINKER__test_imu_Debug CMakeFiles/test_imu.dir/tests/test_imu.cpp.obj | vislam_core.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib || vislam_core.lib
+build test_imu.exe: CXX_EXECUTABLE_LINKER__test_imu_Debug CMakeFiles/test_imu.dir/tests/test_imu.cpp.obj | vislam_core.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_video4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_dnn4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_calib3d4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_features2d4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_flann4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib || vislam_core.lib
   CONFIG = Debug
   FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
   LINK_FLAGS = -Xlinker /subsystem:console -fuse-ld=lld-link
-  LINK_LIBRARIES = vislam_core.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
+  LINK_LIBRARIES = vislam_core.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_video4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_dnn4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_calib3d4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_features2d4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_flann4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
   OBJECT_DIR = CMakeFiles\test_imu.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -274,7 +285,7 @@ build cmake_object_order_depends_target_test_triangulation: phony || cmake_objec
 build CMakeFiles/test_triangulation.dir/tests/test_triangulation.cpp.obj: CXX_COMPILER__test_triangulation_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/tests/test_triangulation.cpp || cmake_object_order_depends_target_test_triangulation
   CONFIG = Debug
   DEP_FILE = CMakeFiles\test_triangulation.dir\tests\test_triangulation.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
+  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\test_triangulation.dir
   OBJECT_FILE_DIR = CMakeFiles\test_triangulation.dir\tests
@@ -290,11 +301,11 @@ build CMakeFiles/test_triangulation.dir/tests/test_triangulation.cpp.obj: CXX_CO
 #############################################
 # Link the executable test_triangulation.exe
 
-build test_triangulation.exe: CXX_EXECUTABLE_LINKER__test_triangulation_Debug CMakeFiles/test_triangulation.dir/tests/test_triangulation.cpp.obj | vislam_core.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib || vislam_core.lib
+build test_triangulation.exe: CXX_EXECUTABLE_LINKER__test_triangulation_Debug CMakeFiles/test_triangulation.dir/tests/test_triangulation.cpp.obj | vislam_core.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_video4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_dnn4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_calib3d4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_features2d4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_flann4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib || vislam_core.lib
   CONFIG = Debug
   FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
   LINK_FLAGS = -Xlinker /subsystem:console -fuse-ld=lld-link
-  LINK_LIBRARIES = vislam_core.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
+  LINK_LIBRARIES = vislam_core.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_video4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_dnn4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_calib3d4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_features2d4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_flann4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
   OBJECT_DIR = CMakeFiles\test_triangulation.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -316,7 +327,7 @@ build cmake_object_order_depends_target_test_optimizer: phony || cmake_object_or
 build CMakeFiles/test_optimizer.dir/tests/test_optimizer.cpp.obj: CXX_COMPILER__test_optimizer_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/tests/test_optimizer.cpp || cmake_object_order_depends_target_test_optimizer
   CONFIG = Debug
   DEP_FILE = CMakeFiles\test_optimizer.dir\tests\test_optimizer.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
+  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\test_optimizer.dir
   OBJECT_FILE_DIR = CMakeFiles\test_optimizer.dir\tests
@@ -332,11 +343,11 @@ build CMakeFiles/test_optimizer.dir/tests/test_optimizer.cpp.obj: CXX_COMPILER__
 #############################################
 # Link the executable test_optimizer.exe
 
-build test_optimizer.exe: CXX_EXECUTABLE_LINKER__test_optimizer_Debug CMakeFiles/test_optimizer.dir/tests/test_optimizer.cpp.obj | vislam_core.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib || vislam_core.lib
+build test_optimizer.exe: CXX_EXECUTABLE_LINKER__test_optimizer_Debug CMakeFiles/test_optimizer.dir/tests/test_optimizer.cpp.obj | vislam_core.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_video4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_dnn4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_calib3d4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_features2d4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_flann4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib || vislam_core.lib
   CONFIG = Debug
   FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
   LINK_FLAGS = -Xlinker /subsystem:console -fuse-ld=lld-link
-  LINK_LIBRARIES = vislam_core.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
+  LINK_LIBRARIES = vislam_core.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_video4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_dnn4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_calib3d4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_features2d4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_flann4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
   OBJECT_DIR = CMakeFiles\test_optimizer.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -358,7 +369,7 @@ build cmake_object_order_depends_target_test_feature_detector: phony || cmake_ob
 build CMakeFiles/test_feature_detector.dir/tests/test_feature_detector.cpp.obj: CXX_COMPILER__test_feature_detector_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/tests/test_feature_detector.cpp || cmake_object_order_depends_target_test_feature_detector
   CONFIG = Debug
   DEP_FILE = CMakeFiles\test_feature_detector.dir\tests\test_feature_detector.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
+  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\test_feature_detector.dir
   OBJECT_FILE_DIR = CMakeFiles\test_feature_detector.dir\tests
@@ -374,11 +385,11 @@ build CMakeFiles/test_feature_detector.dir/tests/test_feature_detector.cpp.obj: 
 #############################################
 # Link the executable test_feature_detector.exe
 
-build test_feature_detector.exe: CXX_EXECUTABLE_LINKER__test_feature_detector_Debug CMakeFiles/test_feature_detector.dir/tests/test_feature_detector.cpp.obj | vislam_core.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib || vislam_core.lib
+build test_feature_detector.exe: CXX_EXECUTABLE_LINKER__test_feature_detector_Debug CMakeFiles/test_feature_detector.dir/tests/test_feature_detector.cpp.obj | vislam_core.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_video4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_dnn4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_calib3d4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_features2d4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_flann4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib || vislam_core.lib
   CONFIG = Debug
   FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
   LINK_FLAGS = -Xlinker /subsystem:console -fuse-ld=lld-link
-  LINK_LIBRARIES = vislam_core.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
+  LINK_LIBRARIES = vislam_core.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_video4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_dnn4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_calib3d4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_features2d4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_flann4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
   OBJECT_DIR = CMakeFiles\test_feature_detector.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -400,7 +411,7 @@ build cmake_object_order_depends_target_test_pose_invariants: phony || cmake_obj
 build CMakeFiles/test_pose_invariants.dir/tests/test_pose_invariants.cpp.obj: CXX_COMPILER__test_pose_invariants_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/tests/test_pose_invariants.cpp || cmake_object_order_depends_target_test_pose_invariants
   CONFIG = Debug
   DEP_FILE = CMakeFiles\test_pose_invariants.dir\tests\test_pose_invariants.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
+  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\test_pose_invariants.dir
   OBJECT_FILE_DIR = CMakeFiles\test_pose_invariants.dir\tests
@@ -416,11 +427,11 @@ build CMakeFiles/test_pose_invariants.dir/tests/test_pose_invariants.cpp.obj: CX
 #############################################
 # Link the executable test_pose_invariants.exe
 
-build test_pose_invariants.exe: CXX_EXECUTABLE_LINKER__test_pose_invariants_Debug CMakeFiles/test_pose_invariants.dir/tests/test_pose_invariants.cpp.obj | vislam_core.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib || vislam_core.lib
+build test_pose_invariants.exe: CXX_EXECUTABLE_LINKER__test_pose_invariants_Debug CMakeFiles/test_pose_invariants.dir/tests/test_pose_invariants.cpp.obj | vislam_core.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_video4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_dnn4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_calib3d4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_features2d4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_flann4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib || vislam_core.lib
   CONFIG = Debug
   FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
   LINK_FLAGS = -Xlinker /subsystem:console -fuse-ld=lld-link
-  LINK_LIBRARIES = vislam_core.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
+  LINK_LIBRARIES = vislam_core.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_video4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_dnn4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_calib3d4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_features2d4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_flann4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
   OBJECT_DIR = CMakeFiles\test_pose_invariants.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -442,7 +453,7 @@ build cmake_object_order_depends_target_test_dataset_loader: phony || cmake_obje
 build CMakeFiles/test_dataset_loader.dir/tests/test_dataset_loader.cpp.obj: CXX_COMPILER__test_dataset_loader_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/tests/test_dataset_loader.cpp || cmake_object_order_depends_target_test_dataset_loader
   CONFIG = Debug
   DEP_FILE = CMakeFiles\test_dataset_loader.dir\tests\test_dataset_loader.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
+  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
   OBJECT_DIR = CMakeFiles\test_dataset_loader.dir
   OBJECT_FILE_DIR = CMakeFiles\test_dataset_loader.dir\tests
@@ -458,11 +469,11 @@ build CMakeFiles/test_dataset_loader.dir/tests/test_dataset_loader.cpp.obj: CXX_
 #############################################
 # Link the executable test_dataset_loader.exe
 
-build test_dataset_loader.exe: CXX_EXECUTABLE_LINKER__test_dataset_loader_Debug CMakeFiles/test_dataset_loader.dir/tests/test_dataset_loader.cpp.obj | vislam_core.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib || vislam_core.lib
+build test_dataset_loader.exe: CXX_EXECUTABLE_LINKER__test_dataset_loader_Debug CMakeFiles/test_dataset_loader.dir/tests/test_dataset_loader.cpp.obj | vislam_core.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_video4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_dnn4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_calib3d4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_features2d4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_flann4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib || vislam_core.lib
   CONFIG = Debug
   FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
   LINK_FLAGS = -Xlinker /subsystem:console -fuse-ld=lld-link
-  LINK_LIBRARIES = vislam_core.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
+  LINK_LIBRARIES = vislam_core.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_video4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_dnn4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_calib3d4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_features2d4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_flann4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
   OBJECT_DIR = CMakeFiles\test_dataset_loader.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -471,6 +482,90 @@ build test_dataset_loader.exe: CXX_EXECUTABLE_LINKER__test_dataset_loader_Debug 
   TARGET_IMPLIB = test_dataset_loader.lib
   TARGET_PDB = test_dataset_loader.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\test_dataset_loader.dir
+
+# =============================================================================
+# Object build statements for EXECUTABLE target test_spsc_ring_buffer
+
+
+#############################################
+# Order-only phony target for test_spsc_ring_buffer
+
+build cmake_object_order_depends_target_test_spsc_ring_buffer: phony || cmake_object_order_depends_target_vislam_core
+
+build CMakeFiles/test_spsc_ring_buffer.dir/tests/test_spsc_ring_buffer.cpp.obj: CXX_COMPILER__test_spsc_ring_buffer_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/tests/test_spsc_ring_buffer.cpp || cmake_object_order_depends_target_test_spsc_ring_buffer
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\test_spsc_ring_buffer.dir\tests\test_spsc_ring_buffer.cpp.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
+  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
+  OBJECT_DIR = CMakeFiles\test_spsc_ring_buffer.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_spsc_ring_buffer.dir\tests
+  TARGET_COMPILE_PDB = CMakeFiles\test_spsc_ring_buffer.dir\
+  TARGET_PDB = test_spsc_ring_buffer.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\test_spsc_ring_buffer.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target test_spsc_ring_buffer
+
+
+#############################################
+# Link the executable test_spsc_ring_buffer.exe
+
+build test_spsc_ring_buffer.exe: CXX_EXECUTABLE_LINKER__test_spsc_ring_buffer_Debug CMakeFiles/test_spsc_ring_buffer.dir/tests/test_spsc_ring_buffer.cpp.obj | vislam_core.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_video4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_dnn4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_calib3d4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_features2d4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_flann4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib || vislam_core.lib
+  CONFIG = Debug
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
+  LINK_FLAGS = -Xlinker /subsystem:console -fuse-ld=lld-link
+  LINK_LIBRARIES = vislam_core.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_video4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_dnn4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_calib3d4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_features2d4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_flann4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
+  OBJECT_DIR = CMakeFiles\test_spsc_ring_buffer.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\test_spsc_ring_buffer.dir\
+  TARGET_FILE = test_spsc_ring_buffer.exe
+  TARGET_IMPLIB = test_spsc_ring_buffer.lib
+  TARGET_PDB = test_spsc_ring_buffer.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\test_spsc_ring_buffer.dir
+
+# =============================================================================
+# Object build statements for EXECUTABLE target test_tracking_health_state_machine
+
+
+#############################################
+# Order-only phony target for test_tracking_health_state_machine
+
+build cmake_object_order_depends_target_test_tracking_health_state_machine: phony || cmake_object_order_depends_target_vislam_core
+
+build CMakeFiles/test_tracking_health_state_machine.dir/tests/test_tracking_health_state_machine.cpp.obj: CXX_COMPILER__test_tracking_health_state_machine_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/tests/test_tracking_health_state_machine.cpp || cmake_object_order_depends_target_test_tracking_health_state_machine
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\test_tracking_health_state_machine.dir\tests\test_tracking_health_state_machine.cpp.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
+  INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
+  OBJECT_DIR = CMakeFiles\test_tracking_health_state_machine.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_tracking_health_state_machine.dir\tests
+  TARGET_COMPILE_PDB = CMakeFiles\test_tracking_health_state_machine.dir\
+  TARGET_PDB = test_tracking_health_state_machine.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\test_tracking_health_state_machine.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target test_tracking_health_state_machine
+
+
+#############################################
+# Link the executable test_tracking_health_state_machine.exe
+
+build test_tracking_health_state_machine.exe: CXX_EXECUTABLE_LINKER__test_tracking_health_state_machine_Debug CMakeFiles/test_tracking_health_state_machine.dir/tests/test_tracking_health_state_machine.cpp.obj | vislam_core.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_video4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_dnn4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_calib3d4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_features2d4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_flann4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib C$:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib || vislam_core.lib
+  CONFIG = Debug
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
+  LINK_FLAGS = -Xlinker /subsystem:console -fuse-ld=lld-link
+  LINK_LIBRARIES = vislam_core.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_video4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_dnn4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_calib3d4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_features2d4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_flann4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_highgui4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_videoio4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgcodecs4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_imgproc4d.lib  C:/vcpkg/installed/x64-windows/debug/lib/opencv_core4d.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
+  OBJECT_DIR = CMakeFiles\test_tracking_health_state_machine.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\test_tracking_health_state_machine.dir\
+  TARGET_FILE = test_tracking_health_state_machine.exe
+  TARGET_IMPLIB = test_tracking_health_state_machine.lib
+  TARGET_PDB = test_tracking_health_state_machine.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\test_tracking_health_state_machine.dir
 
 
 #############################################
@@ -521,6 +616,10 @@ build test_optimizer: phony test_optimizer.exe
 
 build test_pose_invariants: phony test_pose_invariants.exe
 
+build test_spsc_ring_buffer: phony test_spsc_ring_buffer.exe
+
+build test_tracking_health_state_machine: phony test_tracking_health_state_machine.exe
+
 build test_triangulation: phony test_triangulation.exe
 
 build vislam_app: phony vislam_app.exe
@@ -535,7 +634,7 @@ build vislam_core: phony vislam_core.lib
 #############################################
 # Folder: C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build
 
-build all: phony vislam_core.lib vislam_app.exe test_imu.exe test_triangulation.exe test_optimizer.exe test_feature_detector.exe test_pose_invariants.exe test_dataset_loader.exe
+build all: phony vislam_core.lib vislam_app.exe test_imu.exe test_triangulation.exe test_optimizer.exe test_feature_detector.exe test_pose_invariants.exe test_dataset_loader.exe test_spsc_ring_buffer.exe test_tracking_health_state_machine.exe
 
 # =============================================================================
 # Built-in targets

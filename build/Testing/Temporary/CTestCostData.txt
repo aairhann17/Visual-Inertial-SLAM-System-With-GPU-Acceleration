@@ -4,4 +4,6 @@ test_optimizer 2 0.258955
 test_feature_detector 1 0.571475
 test_pose_invariants 1 1.0379
 test_dataset_loader 1 0.455398
+test_spsc_ring_buffer 2 0.286169
+test_tracking_health_state_machine 2 0.0537129
 ---
