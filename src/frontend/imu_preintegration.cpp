@@ -11,6 +11,7 @@ void ImuPreintegration::Reset() {
 
 void ImuPreintegration::Integrate(const utils::ImuMeasurement& measurement) {
     if (!initialized_) {
+        // First sample establishes integration origin.
         last_timestamp_s_ = measurement.timestamp_s;
         initialized_ = true;
         return;
@@ -18,6 +19,7 @@ void ImuPreintegration::Integrate(const utils::ImuMeasurement& measurement) {
 
     const double dt = measurement.timestamp_s - last_timestamp_s_;
     if (dt <= 0.0) {
+        // Ignore out-of-order or duplicate timestamps.
         return;
     }
 

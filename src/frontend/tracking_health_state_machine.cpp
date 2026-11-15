@@ -22,11 +22,13 @@ TrackingHealthDecision TrackingHealthStateMachine::Update(
 
 	switch (state_) {
 		case TrackingHealthState::kInitializing:
+			// Require both visual and IMU signals before entering nominal tracking.
 			if (visual_ok && imu_ok) {
 				state_ = TrackingHealthState::kTracking;
 			}
 			break;
 		case TrackingHealthState::kTracking:
+			// Visual dropout requests explicit feature reinitialization.
 			if (consecutive_visual_drop_ >= config_.max_consecutive_visual_drop) {
 				state_ = TrackingHealthState::kDegraded;
 				decision.should_reinitialize_features = true;
@@ -37,12 +39,14 @@ TrackingHealthDecision TrackingHealthStateMachine::Update(
 			}
 			break;
 		case TrackingHealthState::kDegraded:
+			// Move into recovering only when both streams appear healthy again.
 			if (visual_ok && imu_ok) {
 				state_ = TrackingHealthState::kRecovering;
 				consecutive_recovery_good_ = 1;
 			}
 			break;
 		case TrackingHealthState::kRecovering:
+			// Recovery needs several stable frames to avoid flapping.
 			if (visual_ok && imu_ok) {
 				consecutive_recovery_good_ += 1;
 				if (consecutive_recovery_good_ >= config_.recovery_stable_frames) {
@@ -50,6 +54,7 @@ TrackingHealthDecision TrackingHealthStateMachine::Update(
 					consecutive_recovery_good_ = 0;
 				}
 			} else {
+				// Recovery failure falls back to degraded mode and requests reseed.
 				state_ = TrackingHealthState::kDegraded;
 				consecutive_recovery_good_ = 0;
 				decision.should_reinitialize_features = true;

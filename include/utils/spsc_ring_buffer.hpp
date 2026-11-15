@@ -23,6 +23,7 @@ class SpscRingBuffer {
 	static_assert(Capacity >= 2, "SpscRingBuffer requires Capacity >= 2.");
 
 	public:
+		// Single producer publishes by advancing head after writing element.
 		bool Push(const T& value) {
 			const auto head = head_.load(std::memory_order_relaxed);
 			const auto next = Next(head);
@@ -35,6 +36,7 @@ class SpscRingBuffer {
 			return true;
 		}
 
+		// Single consumer reads element then advances tail to release slot.
 		std::optional<T> Pop() {
 			const auto tail = tail_.load(std::memory_order_relaxed);
 			if (tail == head_.load(std::memory_order_acquire)) {
@@ -55,6 +57,7 @@ class SpscRingBuffer {
 			return (index + 1) % Capacity;
 		}
 
+		// Separate cache lines reduce false sharing between producer and consumer.
 		alignas(detail::kCacheLineSize) std::atomic<std::size_t> head_ {0};
 		alignas(detail::kCacheLineSize) std::atomic<std::size_t> tail_ {0};
 		std::array<T, Capacity> buffer_ {};

@@ -6,6 +6,7 @@ on:
   pull_request:
 
 jobs:
+  # Baseline compile/test gate with warnings-as-errors.
   cpp-build-and-test:
     runs-on: ubuntu-latest
     steps:
@@ -28,6 +29,7 @@ jobs:
       - name: Run C++ tests
         run: ctest --test-dir build-ci --output-on-failure
 
+  # Memory/UB checks for native code paths.
   cpp-sanitizers:
     runs-on: ubuntu-latest
     env:
@@ -58,6 +60,7 @@ jobs:
       - name: Run sanitizer tests
         run: ctest --test-dir build-sanitized --output-on-failure
 
+  # Leak-focused runtime checks on representative tests.
   cpp-valgrind:
     runs-on: ubuntu-latest
     steps:

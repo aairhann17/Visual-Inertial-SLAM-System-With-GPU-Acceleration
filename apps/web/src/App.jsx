@@ -80,6 +80,7 @@ export function App() {
     }
 
     const timeoutId = setTimeout(() => {
+      // Debounce path validation to avoid API calls on every keystroke.
       validateEurocPath(datasetPath.trim())
         .then((result) => {
           if (result.isValid) {
@@ -142,6 +143,7 @@ export function App() {
   useEffect(() => {
     if (!selectedRunId) return;
     const stream = getRunStream(selectedRunId);
+    // SSE keeps status/log panels current without manual polling loops.
     stream.addEventListener("status", () => {
       loadRunDetails(selectedRunId).catch((err) => setError(err.message));
       refreshRuns().catch((err) => setError(err.message));

@@ -7,6 +7,7 @@ void Optimizer::OptimizeTrajectory(std::vector<utils::Pose>& trajectory) const {
         return;
     }
 
+    // Lightweight 3-point smoothing that preserves endpoints.
     for (std::size_t i = 1; i + 1 < trajectory.size(); ++i) {
         trajectory[i].position.x = (trajectory[i - 1].position.x + trajectory[i].position.x + trajectory[i + 1].position.x) / 3.0;
         trajectory[i].position.y = (trajectory[i - 1].position.y + trajectory[i].position.y + trajectory[i + 1].position.y) / 3.0;

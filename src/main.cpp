@@ -186,6 +186,7 @@ int RunEuroc(const RunConfig& config) {
 		const auto& image_info = images[static_cast<std::size_t>(i)];
 
 		while (next_imu_index < imus.size() && imus[next_imu_index].timestamp_s <= image_info.timestamp_s) {
+			// Non-blocking producer path: drop oldest sample on overflow to keep newest data.
 			if (!imu_ring_buffer.Push(imus[next_imu_index])) {
 				(void)imu_ring_buffer.Pop();
 				if (!imu_ring_buffer.Push(imus[next_imu_index])) {
@@ -196,6 +197,7 @@ int RunEuroc(const RunConfig& config) {
 		}
 
 		std::size_t imu_samples_integrated = 0;
+		// Consumer drains all IMU samples available up to this frame timestamp.
 		for (auto sample = imu_ring_buffer.Pop(); sample.has_value(); sample = imu_ring_buffer.Pop()) {
 			imu_preintegration.Integrate(*sample);
 			imu_samples_integrated += 1;
@@ -251,6 +253,7 @@ int RunEuroc(const RunConfig& config) {
 				"Tracking degraded warning code: " + std::string(health_decision.warning_code));
 		}
 		if (health_decision.should_reinitialize_features) {
+			// Recovery action: reseed features and reset IMU delta integration window.
 			cv::goodFeaturesToTrack(gray, previous_points, 200, 0.01, 10.0);
 			previous_gray = gray.clone();
 			imu_preintegration.Reset();

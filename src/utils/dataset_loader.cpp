@@ -91,10 +91,12 @@ std::vector<TimestampedImage> DatasetLoader::LoadEurocCam0() const {
         }
 
         try {
+            // EuRoC timestamps are nanoseconds; convert to seconds for runtime math.
             const double timestamp_s = std::stod(fields[0]) * 1e-9;
             const std::string rel = std::string("mav0/cam0/data/") + fields[1];
             rows.push_back({timestamp_s, rel});
         } catch (...) {
+            // Skip malformed rows to keep loader resilient on partial datasets.
             continue;
         }
     }
@@ -125,6 +127,7 @@ std::vector<ImuMeasurement> DatasetLoader::LoadEurocImu0() const {
 
         try {
             ImuMeasurement m;
+            // EuRoC IMU format: timestamp_ns, gyro(x,y,z), accel(x,y,z).
             m.timestamp_s = std::stod(fields[0]) * 1e-9;
             m.gyro_rps.x = std::stod(fields[1]);
             m.gyro_rps.y = std::stod(fields[2]);
@@ -134,6 +137,7 @@ std::vector<ImuMeasurement> DatasetLoader::LoadEurocImu0() const {
             m.accel_mps2.z = std::stod(fields[6]);
             rows.push_back(m);
         } catch (...) {
+            // Skip malformed rows to keep loader resilient on partial datasets.
             continue;
         }
     }

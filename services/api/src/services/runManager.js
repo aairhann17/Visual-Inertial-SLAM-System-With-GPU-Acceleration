@@ -37,6 +37,7 @@ function emitRunEvent(runId, type, payload) {
 
 async function appendEvent(runId, level, message) {
   await addRunEvent(runId, level, message);
+  // Mirror persisted events to SSE subscribers for live dashboard updates.
   emitRunEvent(runId, "log", { level, message });
 }
 
@@ -71,6 +72,7 @@ async function launchRun({ dataset, datasetPath, maxFrames }) {
   await createRun(run);
   emitRunEvent(runId, "status", { status: "queued" });
 
+  // Fire-and-forget execution keeps request latency low while run proceeds async.
   void executeRun(run).catch(async (error) => {
     await updateRunStatus(runId, "failed", {
       errorMessage: error.message,
@@ -147,6 +149,7 @@ async function executeRun(run) {
   if (fs.existsSync(run.outputPath)) {
     poses = readTrajectoryFile(run.outputPath);
   } else {
+    // Scaffold mode may not emit trajectory; treat as non-fatal completion.
     await appendEvent(
       run.id,
       "warn",

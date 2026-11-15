@@ -21,7 +21,9 @@ struct TrackingHealthConfig {
 struct TrackingHealthDecision {
 	TrackingHealthState state {TrackingHealthState::kInitializing};
 	bool state_changed {false};
+	// True when caller should trigger feature re-seeding before continuing.
 	bool should_reinitialize_features {false};
+	// Stable warning code for logs/metrics pipelines.
 	const char* warning_code {nullptr};
 };
 
