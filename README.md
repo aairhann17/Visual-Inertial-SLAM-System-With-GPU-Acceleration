@@ -11,16 +11,18 @@ A modular C++17 Visual-Inertial SLAM/VIO project with optional CUDA acceleration
 3. [Core SLAM architecture](#core-slam-architecture)
 4. [Full-stack architecture](#full-stack-architecture)
 5. [Prerequisites](#prerequisites)
-6. [Quick start (recommended)](#quick-start-recommended)
-7. [Manual setup](#manual-setup)
-8. [How to run jobs](#how-to-run-jobs)
-9. [REST API reference](#rest-api-reference)
-10. [ML confidence component](#ml-confidence-component)
-11. [Testing and validation](#testing-and-validation)
-12. [Troubleshooting](#troubleshooting)
-13. [Current limitations](#current-limitations)
-14. [Roadmap](#roadmap)
-15. [License](#license)
+6. [Containerized one-command execution](#containerized-one-command-execution)
+7. [Quick start (recommended)](#quick-start-recommended)
+8. [Manual setup](#manual-setup)
+9. [How to run jobs](#how-to-run-jobs)
+10. [REST API reference](#rest-api-reference)
+11. [ML confidence component](#ml-confidence-component)
+12. [Performance benchmarks](#performance-benchmarks)
+13. [Testing and validation](#testing-and-validation)
+14. [Troubleshooting](#troubleshooting)
+15. [Current limitations](#current-limitations)
+16. [Roadmap](#roadmap)
+17. [License](#license)
 
 ---
 
@@ -63,10 +65,13 @@ Main executable:
 ├─ src/                      # C++ implementation
 ├─ tests/                    # C++ tests
 ├─ gpu/                      # Optional CUDA components
+├─ .github/workflows/        # CI pipeline
 ├─ scripts/
 │  ├─ run-fullstack.ps1      # One-command full-stack bootstrap/start
 │  ├─ evaluate_ate_rpe.py
-│  └─ plot_trajectory.py
+│  ├─ plot_trajectory.py
+│  └─ benchmarks/
+│     └─ benchmark_runtime.py
 ├─ services/
 │  └─ api/                   # Express API + PostgreSQL integration
 ├─ apps/
@@ -74,7 +79,10 @@ Main executable:
 ├─ ml/
 │  └─ models/                # Optional confidence-model weights example
 ├─ datasets/                 # Local datasets (not committed)
-└─ docker-compose.yml        # Local PostgreSQL container
+├─ Dockerfile                # API/runtime image (multi-stage, builds vislam_app)
+├─ docker-compose.yml        # Full stack (postgres + api + web)
+├─ docker-compose.gpu.yml    # GPU override for API service
+└─ BENCHMARKS.md             # Latest benchmark summary
 ```
 
 ---
@@ -132,6 +140,35 @@ Artifacts (artifacts/runs/<runId>/trajectory.txt)
 ### Optional
 
 - CUDA toolkit for GPU targets
+
+---
+
+## Containerized one-command execution
+
+From repository root:
+
+```powershell
+docker compose up --build
+```
+
+This starts:
+
+- `postgres` (database)
+- `api` (builds `vislam_app` in Docker and runs Express API)
+- `web` (builds and serves React dashboard via Nginx)
+
+Endpoints:
+
+- Dashboard: `http://127.0.0.1:5173`
+- API: `http://127.0.0.1:8080`
+
+For CUDA-capable environments:
+
+```powershell
+docker compose -f docker-compose.yml -f docker-compose.gpu.yml up --build
+```
+
+> Note: GPU mode requires NVIDIA Container Toolkit and compatible host drivers.
 
 ---
 
@@ -299,6 +336,37 @@ Example model file:
 
 ---
 
+## Performance benchmarks
+
+Benchmark script:
+
+- [scripts/benchmarks/benchmark_runtime.py](./scripts/benchmarks/benchmark_runtime.py)
+
+Generate a benchmark report:
+
+```powershell
+python .\scripts\benchmarks\benchmark_runtime.py `
+  --cpu-cmd ".\build\Debug\vislam_app.exe" `
+  --iterations 100 `
+  --markdown-output ".\BENCHMARKS.md"
+```
+
+Optional GPU comparison run:
+
+```powershell
+python .\scripts\benchmarks\benchmark_runtime.py `
+  --cpu-cmd ".\build\Debug\vislam_app.exe" `
+  --gpu-cmd ".\build-gpu\Debug\vislam_app.exe" `
+  --iterations 100 `
+  --markdown-output ".\BENCHMARKS.md"
+```
+
+Latest committed results:
+
+- [BENCHMARKS.md](./BENCHMARKS.md)
+
+---
+
 ## Testing and validation
 
 ### Native tests
@@ -319,6 +387,18 @@ npm run build
 ```powershell
 curl http://127.0.0.1:8080/api/health
 ```
+
+### CI pipeline
+
+GitHub Actions workflow:
+
+- [ci.yml](./.github/workflows/ci.yml)
+
+Current CI jobs:
+
+- C++ configure/build/test (`ctest`)
+- API dependency/schema/syntax checks
+- Web production build
 
 ---
 

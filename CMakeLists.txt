@@ -14,7 +14,7 @@ if(NOT DEFINED OpenCV_DIR)
     endif()
 endif()
 
-find_package(OpenCV REQUIRED CONFIG COMPONENTS core imgproc imgcodecs videoio highgui)
+find_package(OpenCV REQUIRED CONFIG COMPONENTS core imgproc imgcodecs video videoio highgui)
 
 option(VISLAM_BUILD_TESTS "Build unit-style test executables" ON)
 option(VISLAM_ENABLE_CUDA "Build optional CUDA acceleration library" ON)
@@ -38,6 +38,10 @@ target_include_directories(vislam_core
 )
 
 target_link_libraries(vislam_core PUBLIC ${OpenCV_LIBS})
+
+add_executable(vislam_app src/main.cpp)
+target_link_libraries(vislam_app PRIVATE vislam_core)
+
 if(VISLAM_BUILD_TESTS)
 	enable_testing()
 
@@ -52,6 +56,18 @@ if(VISLAM_BUILD_TESTS)
 	add_executable(test_optimizer tests/test_optimizer.cpp)
 	target_link_libraries(test_optimizer PRIVATE vislam_core)
 	add_test(NAME test_optimizer COMMAND test_optimizer)
+
+	add_executable(test_feature_detector tests/test_feature_detector.cpp)
+	target_link_libraries(test_feature_detector PRIVATE vislam_core)
+	add_test(NAME test_feature_detector COMMAND test_feature_detector)
+
+	add_executable(test_pose_invariants tests/test_pose_invariants.cpp)
+	target_link_libraries(test_pose_invariants PRIVATE vislam_core)
+	add_test(NAME test_pose_invariants COMMAND test_pose_invariants)
+
+	add_executable(test_dataset_loader tests/test_dataset_loader.cpp)
+	target_link_libraries(test_dataset_loader PRIVATE vislam_core)
+	add_test(NAME test_dataset_loader COMMAND test_dataset_loader)
 endif()
 
 if(VISLAM_ENABLE_CUDA)

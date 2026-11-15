@@ -8,9 +8,49 @@ services:
       POSTGRES_PASSWORD: vislam
       POSTGRES_DB: vislam
     ports:
-      - "5432:5432"
+      - "${POSTGRES_HOST_PORT:-5432}:5432"
     volumes:
       - vislam_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U vislam -d vislam"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: api-runtime
+    container_name: vislam-api
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      PORT: 8080
+      DATABASE_URL: postgresql://vislam:vislam@postgres:5432/vislam
+      ENABLE_ML_CONFIDENCE: "true"
+      ARTIFACTS_DIR: /workspace/artifacts/runs
+      VISLAM_EXECUTABLE: /workspace/bin/vislam_app
+    ports:
+      - "${API_HOST_PORT:-8080}:8080"
+    command: >
+      sh -c "node scripts/init-db.js && node src/server.js"
+    volumes:
+      - ./artifacts:/workspace/artifacts
+      - ./datasets:/workspace/datasets:ro
+
+  web:
+    build:
+      context: ./apps/web
+      dockerfile: Dockerfile
+    container_name: vislam-web
+    restart: unless-stopped
+    depends_on:
+      - api
+    ports:
+      - "${WEB_HOST_PORT:-5173}:80"
 
 volumes:
   vislam_postgres_data:

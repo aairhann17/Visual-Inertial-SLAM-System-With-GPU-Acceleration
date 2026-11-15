@@ -1,0 +1,6 @@
+services:
+  api:
+    gpus: all
+    environment:
+      VISLAM_EXECUTABLE: /workspace/bin/vislam_app
+

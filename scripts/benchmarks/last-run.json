@@ -1,0 +1,15 @@
+{
+  "generated_at_utc": "2026-11-15T18:57:26.569376+00:00",
+  "iterations": 20,
+  "cpu": {
+    "label": "C:\\Users\\aaraa\\Visual-Inertial-SLAM-System-With-GPU-Acceleration\\build\\Debug\\vislam_app.exe",
+    "iterations": 20,
+    "mean_ms": 15.207300000011514,
+    "median_ms": 12.925900000027468,
+    "p95_ms": 19.4045350000039,
+    "min_ms": 10.156100000017432,
+    "max_ms": 51.10290000004625,
+    "loop_hz": 65.75789259100846
+  },
+  "gpu": null
+}
