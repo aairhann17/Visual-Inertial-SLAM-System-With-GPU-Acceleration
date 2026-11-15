@@ -270,6 +270,9 @@ VISLAM_ENABLE_ROS2:BOOL=OFF
 //Enable strict compiler warnings as errors
 VISLAM_ENABLE_STRICT_WARNINGS:BOOL=ON
 
+//Use spdlog-backed structured logging
+VISLAM_USE_SPDLOG:BOOL=ON
+
 //Value Computed by CMake
 VisualInertialSLAM_BINARY_DIR:STATIC=C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build
 
@@ -293,6 +296,9 @@ protobuf_VERBOSE:BOOL=OFF
 
 //The directory containing a CMake configuration file for quirc.
 quirc_DIR:PATH=C:/vcpkg/installed/x64-windows/share/quirc
+
+//The directory containing a CMake configuration file for spdlog.
+spdlog_DIR:PATH=spdlog_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for utf8_range.
 utf8_range_DIR:PATH=C:/vcpkg/installed/x64-windows/share/utf8_range

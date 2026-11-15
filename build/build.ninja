@@ -51,6 +51,7 @@ build cmake_object_order_depends_target_vislam_core: phony || .
 
 build CMakeFiles/vislam_core.dir/src/frontend/feature_detector.cpp.obj: CXX_COMPILER__vislam_core_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/frontend/feature_detector.cpp || cmake_object_order_depends_target_vislam_core
   CONFIG = Debug
+  DEFINES = -DVISLAM_HAS_SPDLOG=0
   DEP_FILE = CMakeFiles\vislam_core.dir\src\frontend\feature_detector.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
@@ -62,6 +63,7 @@ build CMakeFiles/vislam_core.dir/src/frontend/feature_detector.cpp.obj: CXX_COMP
 
 build CMakeFiles/vislam_core.dir/src/frontend/feature_tracker.cpp.obj: CXX_COMPILER__vislam_core_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/frontend/feature_tracker.cpp || cmake_object_order_depends_target_vislam_core
   CONFIG = Debug
+  DEFINES = -DVISLAM_HAS_SPDLOG=0
   DEP_FILE = CMakeFiles\vislam_core.dir\src\frontend\feature_tracker.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
@@ -73,6 +75,7 @@ build CMakeFiles/vislam_core.dir/src/frontend/feature_tracker.cpp.obj: CXX_COMPI
 
 build CMakeFiles/vislam_core.dir/src/frontend/imu_preintegration.cpp.obj: CXX_COMPILER__vislam_core_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/frontend/imu_preintegration.cpp || cmake_object_order_depends_target_vislam_core
   CONFIG = Debug
+  DEFINES = -DVISLAM_HAS_SPDLOG=0
   DEP_FILE = CMakeFiles\vislam_core.dir\src\frontend\imu_preintegration.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
@@ -84,6 +87,7 @@ build CMakeFiles/vislam_core.dir/src/frontend/imu_preintegration.cpp.obj: CXX_CO
 
 build CMakeFiles/vislam_core.dir/src/frontend/tracking_health_state_machine.cpp.obj: CXX_COMPILER__vislam_core_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/frontend/tracking_health_state_machine.cpp || cmake_object_order_depends_target_vislam_core
   CONFIG = Debug
+  DEFINES = -DVISLAM_HAS_SPDLOG=0
   DEP_FILE = CMakeFiles\vislam_core.dir\src\frontend\tracking_health_state_machine.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
@@ -95,6 +99,7 @@ build CMakeFiles/vislam_core.dir/src/frontend/tracking_health_state_machine.cpp.
 
 build CMakeFiles/vislam_core.dir/src/backend/optimizer.cpp.obj: CXX_COMPILER__vislam_core_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/backend/optimizer.cpp || cmake_object_order_depends_target_vislam_core
   CONFIG = Debug
+  DEFINES = -DVISLAM_HAS_SPDLOG=0
   DEP_FILE = CMakeFiles\vislam_core.dir\src\backend\optimizer.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
@@ -106,6 +111,7 @@ build CMakeFiles/vislam_core.dir/src/backend/optimizer.cpp.obj: CXX_COMPILER__vi
 
 build CMakeFiles/vislam_core.dir/src/backend/bundle_adjustment.cpp.obj: CXX_COMPILER__vislam_core_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/backend/bundle_adjustment.cpp || cmake_object_order_depends_target_vislam_core
   CONFIG = Debug
+  DEFINES = -DVISLAM_HAS_SPDLOG=0
   DEP_FILE = CMakeFiles\vislam_core.dir\src\backend\bundle_adjustment.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
@@ -117,6 +123,7 @@ build CMakeFiles/vislam_core.dir/src/backend/bundle_adjustment.cpp.obj: CXX_COMP
 
 build CMakeFiles/vislam_core.dir/src/backend/pose_graph.cpp.obj: CXX_COMPILER__vislam_core_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/backend/pose_graph.cpp || cmake_object_order_depends_target_vislam_core
   CONFIG = Debug
+  DEFINES = -DVISLAM_HAS_SPDLOG=0
   DEP_FILE = CMakeFiles\vislam_core.dir\src\backend\pose_graph.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
@@ -128,6 +135,7 @@ build CMakeFiles/vislam_core.dir/src/backend/pose_graph.cpp.obj: CXX_COMPILER__v
 
 build CMakeFiles/vislam_core.dir/src/mapping/triangulation.cpp.obj: CXX_COMPILER__vislam_core_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/mapping/triangulation.cpp || cmake_object_order_depends_target_vislam_core
   CONFIG = Debug
+  DEFINES = -DVISLAM_HAS_SPDLOG=0
   DEP_FILE = CMakeFiles\vislam_core.dir\src\mapping\triangulation.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
@@ -139,6 +147,7 @@ build CMakeFiles/vislam_core.dir/src/mapping/triangulation.cpp.obj: CXX_COMPILER
 
 build CMakeFiles/vislam_core.dir/src/mapping/keyframe.cpp.obj: CXX_COMPILER__vislam_core_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/mapping/keyframe.cpp || cmake_object_order_depends_target_vislam_core
   CONFIG = Debug
+  DEFINES = -DVISLAM_HAS_SPDLOG=0
   DEP_FILE = CMakeFiles\vislam_core.dir\src\mapping\keyframe.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
@@ -150,6 +159,7 @@ build CMakeFiles/vislam_core.dir/src/mapping/keyframe.cpp.obj: CXX_COMPILER__vis
 
 build CMakeFiles/vislam_core.dir/src/mapping/map.cpp.obj: CXX_COMPILER__vislam_core_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/mapping/map.cpp || cmake_object_order_depends_target_vislam_core
   CONFIG = Debug
+  DEFINES = -DVISLAM_HAS_SPDLOG=0
   DEP_FILE = CMakeFiles\vislam_core.dir\src\mapping\map.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
@@ -161,6 +171,7 @@ build CMakeFiles/vislam_core.dir/src/mapping/map.cpp.obj: CXX_COMPILER__vislam_c
 
 build CMakeFiles/vislam_core.dir/src/utils/dataset_loader.cpp.obj: CXX_COMPILER__vislam_core_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/utils/dataset_loader.cpp || cmake_object_order_depends_target_vislam_core
   CONFIG = Debug
+  DEFINES = -DVISLAM_HAS_SPDLOG=0
   DEP_FILE = CMakeFiles\vislam_core.dir\src\utils\dataset_loader.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
@@ -200,6 +211,7 @@ build cmake_object_order_depends_target_vislam_app: phony || cmake_object_order_
 
 build CMakeFiles/vislam_app.dir/src/main.cpp.obj: CXX_COMPILER__vislam_app_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/src/main.cpp || cmake_object_order_depends_target_vislam_app
   CONFIG = Debug
+  DEFINES = -DVISLAM_HAS_SPDLOG=0
   DEP_FILE = CMakeFiles\vislam_app.dir\src\main.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
@@ -242,6 +254,7 @@ build cmake_object_order_depends_target_test_imu: phony || cmake_object_order_de
 
 build CMakeFiles/test_imu.dir/tests/test_imu.cpp.obj: CXX_COMPILER__test_imu_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/tests/test_imu.cpp || cmake_object_order_depends_target_test_imu
   CONFIG = Debug
+  DEFINES = -DVISLAM_HAS_SPDLOG=0
   DEP_FILE = CMakeFiles\test_imu.dir\tests\test_imu.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
@@ -284,6 +297,7 @@ build cmake_object_order_depends_target_test_triangulation: phony || cmake_objec
 
 build CMakeFiles/test_triangulation.dir/tests/test_triangulation.cpp.obj: CXX_COMPILER__test_triangulation_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/tests/test_triangulation.cpp || cmake_object_order_depends_target_test_triangulation
   CONFIG = Debug
+  DEFINES = -DVISLAM_HAS_SPDLOG=0
   DEP_FILE = CMakeFiles\test_triangulation.dir\tests\test_triangulation.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
@@ -326,6 +340,7 @@ build cmake_object_order_depends_target_test_optimizer: phony || cmake_object_or
 
 build CMakeFiles/test_optimizer.dir/tests/test_optimizer.cpp.obj: CXX_COMPILER__test_optimizer_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/tests/test_optimizer.cpp || cmake_object_order_depends_target_test_optimizer
   CONFIG = Debug
+  DEFINES = -DVISLAM_HAS_SPDLOG=0
   DEP_FILE = CMakeFiles\test_optimizer.dir\tests\test_optimizer.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
@@ -368,6 +383,7 @@ build cmake_object_order_depends_target_test_feature_detector: phony || cmake_ob
 
 build CMakeFiles/test_feature_detector.dir/tests/test_feature_detector.cpp.obj: CXX_COMPILER__test_feature_detector_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/tests/test_feature_detector.cpp || cmake_object_order_depends_target_test_feature_detector
   CONFIG = Debug
+  DEFINES = -DVISLAM_HAS_SPDLOG=0
   DEP_FILE = CMakeFiles\test_feature_detector.dir\tests\test_feature_detector.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
@@ -410,6 +426,7 @@ build cmake_object_order_depends_target_test_pose_invariants: phony || cmake_obj
 
 build CMakeFiles/test_pose_invariants.dir/tests/test_pose_invariants.cpp.obj: CXX_COMPILER__test_pose_invariants_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/tests/test_pose_invariants.cpp || cmake_object_order_depends_target_test_pose_invariants
   CONFIG = Debug
+  DEFINES = -DVISLAM_HAS_SPDLOG=0
   DEP_FILE = CMakeFiles\test_pose_invariants.dir\tests\test_pose_invariants.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
@@ -452,6 +469,7 @@ build cmake_object_order_depends_target_test_dataset_loader: phony || cmake_obje
 
 build CMakeFiles/test_dataset_loader.dir/tests/test_dataset_loader.cpp.obj: CXX_COMPILER__test_dataset_loader_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/tests/test_dataset_loader.cpp || cmake_object_order_depends_target_test_dataset_loader
   CONFIG = Debug
+  DEFINES = -DVISLAM_HAS_SPDLOG=0
   DEP_FILE = CMakeFiles\test_dataset_loader.dir\tests\test_dataset_loader.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
@@ -494,6 +512,7 @@ build cmake_object_order_depends_target_test_spsc_ring_buffer: phony || cmake_ob
 
 build CMakeFiles/test_spsc_ring_buffer.dir/tests/test_spsc_ring_buffer.cpp.obj: CXX_COMPILER__test_spsc_ring_buffer_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/tests/test_spsc_ring_buffer.cpp || cmake_object_order_depends_target_test_spsc_ring_buffer
   CONFIG = Debug
+  DEFINES = -DVISLAM_HAS_SPDLOG=0
   DEP_FILE = CMakeFiles\test_spsc_ring_buffer.dir\tests\test_spsc_ring_buffer.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
@@ -536,6 +555,7 @@ build cmake_object_order_depends_target_test_tracking_health_state_machine: phon
 
 build CMakeFiles/test_tracking_health_state_machine.dir/tests/test_tracking_health_state_machine.cpp.obj: CXX_COMPILER__test_tracking_health_state_machine_unscanned_Debug C$:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/tests/test_tracking_health_state_machine.cpp || cmake_object_order_depends_target_test_tracking_health_state_machine
   CONFIG = Debug
+  DEFINES = -DVISLAM_HAS_SPDLOG=0
   DEP_FILE = CMakeFiles\test_tracking_health_state_machine.dir\tests\test_tracking_health_state_machine.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -std=c++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -Wpedantic -Werror
   INCLUDES = -IC:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/include -isystem C:/vcpkg/installed/x64-windows/include/opencv4
