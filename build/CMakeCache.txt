@@ -262,7 +262,7 @@ VCPKG_TARGET_TRIPLET:UNINITIALIZED=x64-windows
 VISLAM_BUILD_TESTS:BOOL=ON
 
 //Build optional CUDA acceleration library
-VISLAM_ENABLE_CUDA:BOOL=ON
+VISLAM_ENABLE_CUDA:BOOL=OFF
 
 //Value Computed by CMake
 VisualInertialSLAM_BINARY_DIR:STATIC=C:/Users/aaraa/Visual-Inertial-SLAM-System-With-GPU-Acceleration/build
