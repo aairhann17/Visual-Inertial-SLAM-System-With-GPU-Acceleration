@@ -1,4 +1,3 @@
-#include <cassert>
 #include <vector>
 
 #include "backend/optimizer.hpp"
@@ -12,6 +11,8 @@ int main() {
 	vislam::backend::Optimizer optimizer;
 	optimizer.OptimizeTrajectory(trajectory);
 
-	assert(trajectory[1].position.x < 100.0);
+	if (!(trajectory[1].position.x < 100.0)) {
+		return 1;
+	}
 	return 0;
 }

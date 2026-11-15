@@ -1,33 +1,39 @@
-#include <cassert>
-
 #include "utils/spsc_ring_buffer.hpp"
 
 int main() {
 	vislam::utils::SpscRingBuffer<int, 4> buffer;
 
-	assert(buffer.Empty());
-	assert(buffer.Push(1));
-	assert(buffer.Push(2));
-	assert(buffer.Push(3));
-	assert(!buffer.Push(4));
+	if (!buffer.Empty()) {
+		return 1;
+	}
+	if (!buffer.Push(1) || !buffer.Push(2) || !buffer.Push(3) || buffer.Push(4)) {
+		return 1;
+	}
 
 	const auto first = buffer.Pop();
-	assert(first.has_value());
-	assert(*first == 1);
+	if (!first.has_value() || *first != 1) {
+		return 1;
+	}
 
 	const auto second = buffer.Pop();
-	assert(second.has_value());
-	assert(*second == 2);
+	if (!second.has_value() || *second != 2) {
+		return 1;
+	}
 
-	assert(buffer.Push(4));
+	if (!buffer.Push(4)) {
+		return 1;
+	}
 	const auto third = buffer.Pop();
-	assert(third.has_value());
-	assert(*third == 3);
+	if (!third.has_value() || *third != 3) {
+		return 1;
+	}
 	const auto fourth = buffer.Pop();
-	assert(fourth.has_value());
-	assert(*fourth == 4);
+	if (!fourth.has_value() || *fourth != 4) {
+		return 1;
+	}
 
-	assert(buffer.Empty());
+	if (!buffer.Empty()) {
+		return 1;
+	}
 	return 0;
 }
-

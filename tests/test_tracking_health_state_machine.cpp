@@ -1,5 +1,3 @@
-#include <cassert>
-
 #include "frontend/tracking_health_state_machine.hpp"
 
 int main() {
@@ -11,19 +9,30 @@ int main() {
 	vislam::frontend::TrackingHealthStateMachine machine(config);
 
 	auto decision = machine.Update(40, 3);
-	assert(decision.state == vislam::frontend::TrackingHealthState::kTracking);
+	if (decision.state != vislam::frontend::TrackingHealthState::kTracking) {
+		return 1;
+	}
 
 	decision = machine.Update(5, 3);
-	assert(decision.state == vislam::frontend::TrackingHealthState::kTracking);
+	if (decision.state != vislam::frontend::TrackingHealthState::kTracking) {
+		return 1;
+	}
 	decision = machine.Update(5, 3);
-	assert(decision.state == vislam::frontend::TrackingHealthState::kDegraded);
-	assert(decision.should_reinitialize_features);
+	if (decision.state != vislam::frontend::TrackingHealthState::kDegraded) {
+		return 1;
+	}
+	if (!decision.should_reinitialize_features) {
+		return 1;
+	}
 
 	decision = machine.Update(30, 4);
-	assert(decision.state == vislam::frontend::TrackingHealthState::kRecovering);
+	if (decision.state != vislam::frontend::TrackingHealthState::kRecovering) {
+		return 1;
+	}
 	decision = machine.Update(30, 4);
-	assert(decision.state == vislam::frontend::TrackingHealthState::kTracking);
+	if (decision.state != vislam::frontend::TrackingHealthState::kTracking) {
+		return 1;
+	}
 
 	return 0;
 }
-
